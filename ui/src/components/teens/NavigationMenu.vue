@@ -31,7 +31,7 @@
           class="white--text mt-2"
           to ="/"
         >
-          youthへ移動
+          メインページへ移動
         </v-btn>
   </v-navigation-drawer> 
 
@@ -74,7 +74,7 @@
             class="hidden-xs-only"
             to ="/"
           >
-            Youth
+            MAIN
           </v-btn>
           <v-btn 
           icon
