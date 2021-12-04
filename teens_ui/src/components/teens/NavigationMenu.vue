@@ -73,7 +73,7 @@
           <v-btn 
             text 
             class="hidden-xs-only"
-            :href="'/https://sinergy2021.org'"
+            :href="'https://sinergy2021.org'"
             target="_blank"
           >
             YOUTH
@@ -116,49 +116,41 @@ export default {
 }
 </script>
 
-<style lang="scss"  scoped>
+<style scoped>
 
 .navigationmenu {
+    /* background-image: linear-gradient(-90deg, #55bab0, #40a9e1); */
     background-image: linear-gradient(-90deg, #62c9bf, #68acce);
 }
-
 .v-footer--fixed {
-  z-index: 1;
+    z-index: 1;
 }
+
 #head #head-holder #main-nav #globalnav li.gnli a.primarynav span:last-child {
-  display: block;
-  font-size: 1rem;
-  padding-top: 0.1rem;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+    display: block;
+    font-size: 1rem;
+    padding-top: 0.1
+rem
+;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
     
 }
-
 a {
-  text-decoration: none;
-  color: inherit;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 .v-navigation-drawer{
   text-align: center;
-  /* background-image: linear-gradient(-90deg, #8f9292, #47494f); */
-  background-image: linear-gradient(-90deg, #302b30, #18091f);
-  // background-image: linear-gradient(-90deg, #767575, #242324);
+  background-image: linear-gradient(-90deg, #62c9bf, #68acce);
 }
-.v-toolbar__content .v-btn.v-btn--icon.v-size--default, .v-toolbar__extension .v-btn.v-btn--icon.v-size--default {
-    height: 48px;
-    width: 48px;    
-}
-
-@media only screen and (max-width: 600px) {
-  ::v-deep {
-    .v-toolbar__content {
-      padding: 4px 16px 0 0;
-    }
-  }
+.text-caption{
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 </style>
