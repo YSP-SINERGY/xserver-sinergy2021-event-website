@@ -29,7 +29,7 @@
         <v-btn 
           text 
           class="white--text mt-2"
-          to ="/teens"
+          :href="'https://sinergy2021.org/teens'"
         >
           Teensへ移動
         </v-btn>
@@ -65,7 +65,7 @@
         <v-btn 
           text 
           class="hidden-xs-only"
-          to ="/teens"
+          :href="'https://sinergy2021.org/teens'"
         >
           Teens
         </v-btn>
