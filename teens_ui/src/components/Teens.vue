@@ -12,7 +12,7 @@
         <v-card-text
          class="white--text text-center"
         >
-        <p>S!NERGY TEENS 2021 特設サイト</p>
+        <p>S!NERGY Teens 2021 特設サイト</p>
         <v-divider></v-divider>
         </v-card-text> 
         <home class="mb-15" />
