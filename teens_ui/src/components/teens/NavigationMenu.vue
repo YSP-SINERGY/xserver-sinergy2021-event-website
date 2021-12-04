@@ -29,9 +29,10 @@
         <v-btn 
           text 
           class="white--text mt-2"
-          to ="/"
+          :href="'https://sinergy2021.org'"
+          target="_blank"
         >
-          メインページへ移動
+          YOUTHページへ移動
         </v-btn>
   </v-navigation-drawer> 
 
@@ -54,7 +55,7 @@
           text 
           class="text-caption"
           >
-          TEENS
+          Teens
         </v-toolbar-title>
         <!-- <v-btn text class="text-caption">TEENS</v-btn> -->
         <v-spacer></v-spacer>
@@ -72,21 +73,26 @@
           <v-btn 
             text 
             class="hidden-xs-only"
-            to ="/"
+            :href="'/https://sinergy2021.org'"
+            target="_blank"
           >
-            MAIN
-          </v-btn>
-          <v-btn 
-          icon
-          href="https://twitter.com/ergy_sin">
-            <v-icon >mdi-twitter</v-icon>
-          </v-btn>
-          <v-btn icon
-            href="https://www.facebook.com/sinergy2016/">
-            <v-icon>mdi-facebook</v-icon>
+            YOUTH
           </v-btn>
           <v-btn 
             icon
+            target="_blank"
+            href="https://twitter.com/ergy_sin">
+            <v-icon >mdi-twitter</v-icon>
+          </v-btn>
+          <v-btn 
+            icon
+            target="_blank"
+            href="https://www.facebook.com/sinergy2016/">
+          <v-icon>mdi-facebook</v-icon>
+          </v-btn>
+          <v-btn 
+            icon
+            target="_blank"
             href="https://www.instagram.com/sinergy_2021/?utm_medium=copy_link">
             <v-icon>mdi-instagram</v-icon>
           </v-btn>

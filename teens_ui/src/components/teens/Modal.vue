@@ -2,44 +2,45 @@
   <v-dialog
     v-model="dialog"
     persistent
-    max-width="800"
+    max-width="695"
+    max-height="650"
   >
-    <v-card class="">            
-      <div class="text-center">
-        <h1 class="pa-5">プレゼンター紹介</h1>
+    <v-card>            
+      <div class="text-center">  
         <slot name="body">
           <iframe 
-            width="80%"
-            height="315" 
+            width="90%"
+            height="350" 
             :src="item.youtubeUrl"
             title="YouTube video player"
             frameborder="0"
+            class="mt-6"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
-          <div class="text-center pa-5">
-            <p>名前：{{ item.desc }}</p>
-            <p>内容：{{ item.range }}</p>
+          <div class="text-center px-6">
+            <h4 class="py-3 name-box">{{ item.desc }}</h4>
+            <p>{{ item.range }}</p>
           </div>
-
           <v-dialog
             v-model="confirmDialog"
             persistent
             max-width="290"
           >
             <template v-slot:activator="{ on, attrs }">
-              <b-button
+              <v-btn
                 variant="secondary"
-                class="col btn-vote btn-rounded mb-6"
+                color="blue-grey lighten-1"
+                class="white--text"
                 v-bind="attrs"
                 v-on="on"
               >投票
-              </b-button>
+              </v-btn>
             </template>
             <v-alert
             border="left"
             colored-border
-            color="amber darken-3"
+            color="light-green accent-4"
             type="error"
             elevation="2"    
             width="100%"
@@ -60,11 +61,11 @@
                     確定する
                   </v-btn> -->
                   <v-btn
-                    color="warning"
+                    color="green darken-2"
                     text
                     @click="$emit('update:dialog', false)"
                   >
-                    閉じる
+                    <strong>閉じる</strong>
                   </v-btn>
                 </v-card-actions>
             </v-alert>
@@ -72,10 +73,11 @@
         </slot>
       </div>
 
-      <div class="modal-footer">
+      <div class="text-right">
         <slot name="footer">
+          <v-spacer />
           <v-btn 
-            class="btn-rounded" 
+            class="btn-rounded mx-3 mb-3" 
             @click="$emit('update:dialog', false)"
           >閉じる
           </v-btn>
@@ -126,5 +128,8 @@
 }
 .v-card{
   background-image: linear-gradient(-90deg, #e5ebeb, #f8f9ff);
+}
+.name-box {
+  border-bottom: solid 1px ;
 }
 </style>

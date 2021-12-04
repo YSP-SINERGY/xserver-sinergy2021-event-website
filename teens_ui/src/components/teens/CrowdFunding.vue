@@ -4,12 +4,10 @@
       v-scroll="onScroll"
       class="yellow darken-4"
       v-show="fab"
-      fab
       dark
       fixed
       bottom
       right
-      small
       :href="'https://camp-fire.jp/projects/view/522896'"
       target="_blank" 
     >    
@@ -49,9 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .v-btn{
-  max-width: 5%;
-  min-width: 10%;
-  font-size: 100%;
   border-radius:5px;
+  margin-right: 5px;
 }
 </style>

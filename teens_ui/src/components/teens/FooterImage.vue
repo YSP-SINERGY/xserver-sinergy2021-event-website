@@ -12,8 +12,14 @@
     >
       <hr class="hr1 my-1">
       <v-card-text class="white--text pt-6">
-        お問い合わせ<br>
-        sinergy2021committee@gmail.com<br>
+        <v-btn 
+          text
+          :href="'https://www.sinergy-jp.org/contact/'" 
+          target="_blank"
+          class = "white--text mt-2"
+        >
+         お問い合わせ
+        </v-btn>
       </v-card-text>
       <sns-icon />
       <v-divider />

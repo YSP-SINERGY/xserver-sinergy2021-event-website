@@ -1,38 +1,38 @@
 <template>
-  <div>
-    <h1 class="head-border my-15">
+  <v-container>
+    <h1 class="head-border mt-15 mb-10">
       <a id="index2">
-        <strong>ENTRY WORKS</strong>
+        <strong>PRESENTER</strong>
       </a>
     </h1>
-    <div class="vote hidden-sm-and-down">
-      <v-row class="presenter-container" width="700" height="500" alt="*">
+    <div >
+      <v-row>
         <v-col
           v-for="item in items"
           :key="item.id"
-          cols="12"
+          cols="6"
           lg="4"
           md="6"
           sm="6"
+          xs="6"
         >
           <div>
             <h2></h2>
             <img
+              @click="openModal(item)"
               :src="item.imageUrl"
-              class="rounded-circle"
-              width="250"
-              height="250"
+              class="mini-rounded-circle responsive my-3"
               alt="*"
-              style="margin: 60px 20px 20px 20px;"
             >
           </div>
-          <b-button
+          <v-btn
             @click="openModal(item)"
             :src="item.img_src"
-            class="col btn btn-dark-gray btn-rounded"
+            color="blue-grey lighten-1"
+            class="white--text"
           >
             {{ item.desc }}
-          </b-button>
+          </v-btn>
           
         </v-col>
       </v-row>
@@ -40,50 +40,8 @@
         :dialog.sync="isModal"
         :item="selectedItem"
       />
-    </div>
-
-    <div class="hidden-md-and-up mobile-vote">
-      <v-carousel 
-        hide-delimiter-background
-        hide-delimiters
-        show-arrows-on-hover
-      >
-        <v-carousel-item
-          v-for="(item, i) in items"
-          :key="i"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
-        >
-          <div class="mobile-vote-box">
-            <img
-              :src="item.imageUrl"
-              class="mini-rounded-circle my-3"
-            >
-            <b-button
-              @click="openModal(item)"
-              :src="item.img_src"
-              class="col btn btn-dark-gray btn-rounded"
-            >
-              {{ item.desc }}
-            </b-button>
-          </div>
-          
-          <template v-slot:placeholder>
-            <v-row
-              class="fill-height mb-6"
-              align="center"
-              justify="center" 
-            >
-              <v-progress-circular
-                indeterminate
-                color="blue-grey"
-              />
-            </v-row>
-          </template>
-        </v-carousel-item>
-      </v-carousel>
-    </div>      
-  </div>
+    </div>  
+  </v-container>
 </template>
 
 <script>
@@ -103,7 +61,7 @@
     },
     created () {
       this.items = [
-        { 
+         { 
           id: 1,
           desc: '菅俣登子',
           range: '食品ロス',
@@ -158,13 +116,12 @@
           youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
           imageUrl: require("@/assets/teens/t_7.jpg"),
           isShow: false
-        }      
+        } 
       ].sort(() => 0.5 - Math.random());
     },
     watch: {
       items (newItems) {
         console.log(newItems);
-        // this.items = this.items.sort(() => 0.5 - Math.random());
       }
     },
     methods: {
@@ -173,8 +130,6 @@
         console.log(item);
         
         this.isModal = true;
-
-        // this.items[index].isShow = true
       },
       closeModal (index) {
         console.log(index)
@@ -207,7 +162,7 @@
 
 .mini-rounded-circle {
   margin: auto;
-  border-radius: 10% 0; 
+  border-radius: 5% 5%; 
   width: 180px;
   height: 230px;
   border:1px solid #edecec; 
@@ -234,9 +189,9 @@
   text-decoration: none;
   border-radius: 4px;
   color: #ffffff;
-  // background: #ff8400;
-  background: linear-gradient(to right, #758383, #404043);
-  // background: linear-gradient(to right, #757c81, #3b3b46);
+  background: #2c2c3f;
+  background: -webkit-linear-gradient(to right, #596166, #47474b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #757c81, #3b3b46);
 }
 .btn-rounded {
   border-radius: 35px;
@@ -247,6 +202,12 @@
   &-box {
     display: inline-block;
   }
+}
+.responsive {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  max-height: 300px;
 }
 </style>
 
@@ -260,5 +221,4 @@
     height: 300px;
   }
 }
-
 </style>

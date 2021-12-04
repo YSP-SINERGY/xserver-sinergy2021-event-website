@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router.js'
  
 /*ここから*/
 import vuetify from './plugins/vuetify'; // add
@@ -26,7 +25,6 @@ Vue.use(VueScrollTo)  // add
 Vue.config.productionTip = false
 
 new Vue({
-  router,
   vuetify,
   render: h => h(App)
 }).$mount('#app')
