@@ -2,17 +2,19 @@
  <v-app>
 
   <div id="app">
-    <div class="youth">
-      <router-view />
+    <div class="teens"><teens></teens>
     </div>
   </div>
    </v-app>
 </template>
 
 <script>
-
+import Teens from './components/Teens.vue'
 export default {
   name: 'App',
+  components: {
+      Teens
+    },
   data: () => ({
     //
   }),
