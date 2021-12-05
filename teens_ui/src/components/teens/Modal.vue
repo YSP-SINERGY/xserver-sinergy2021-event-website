@@ -41,7 +41,7 @@
             <v-alert
             border="left"
             colored-border
-            color="light-green accent-4"
+            color="orange accent-4"
             type="error"
             elevation="2"    
             width="100%"
@@ -50,7 +50,7 @@
               class="text-subtitle-1 justify-center"
               >
                 <!-- <strong>投票を確定しますか？</strong> -->
-                <strong>投票期間ではありません。</strong>
+                <font size="-1"><strong>投票期間ではありません。</strong></font>
                 </v-card-title>
                 <v-card-actions>
                   <v-spacer></v-spacer>
@@ -62,11 +62,11 @@
                     確定する
                   </v-btn> -->
                   <v-btn
-                    color="green darken-2"
+                    color="orange darken-2"
                     text
                     @click="$emit('update:dialog', false)"
                   >
-                    <strong>閉じる</strong>
+                    <font size="-1"><strong>閉じる</strong></font>
                   </v-btn>
                 </v-card-actions>
             </v-alert>

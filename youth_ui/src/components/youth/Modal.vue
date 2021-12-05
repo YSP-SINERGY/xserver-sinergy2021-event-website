@@ -50,9 +50,9 @@
               class="text-subtitle-1 justify-center"
               >
                 <!-- <strong>投票を確定しますか？</strong> -->
-                <strong>投票期間ではありません。</strong>
+                <font size="-1"><strong>投票期間ではありません。</strong></font>
                 </v-card-title>
-                <v-card-actions>
+                <v-card-actions>s
                   <v-spacer></v-spacer>
                   <!-- <v-btn
                     color="warning"
@@ -66,7 +66,7 @@
                     text
                     @click="$emit('update:dialog', false)"
                   >
-                    <strong>閉じる</strong>
+                    <font size="-1"><strong>閉じる</strong></font>
                   </v-btn>
                 </v-card-actions>
             </v-alert>
