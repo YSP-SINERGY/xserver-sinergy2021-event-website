@@ -21,7 +21,7 @@
             <img
               @click="openModal(item)"
               :src="item.imageUrl"
-              class="mini-rounded-circle responsive my-3"
+              class="mini-rounded-circle responsive my-3 img_wrap"
               alt="*"
             >
           </div>
@@ -277,4 +277,21 @@
     height: 300px;
   }
 }
+.img_wrap{
+  border: 1px solid #ddd;
+  width: 300px;
+  height: 226px;
+  margin: 20px auto 0;
+  transition-duration: 0.5s;
+}
+.img_wrap img{
+  width: 100%;
+  cursor: pointer;
+}
+.img_wrap:hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+  transition-duration: 0.5s;
+}
+
 </style>
