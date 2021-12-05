@@ -9,6 +9,7 @@
       <div class="text-center">  
         <slot name="body">
           <iframe 
+            v-if="dialog"
             width="90%"
             height="350" 
             :src="item.youtubeUrl"
