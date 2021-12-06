@@ -73,7 +73,7 @@
           <v-btn 
             text 
             class="hidden-xs-only"
-            :href="'/https://sinergy2021.org'"
+            :href="'https://sinergy2021.org'"
             target="_blank"
           >
             YOUTH
