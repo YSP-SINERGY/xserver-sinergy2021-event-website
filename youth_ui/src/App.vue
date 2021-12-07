@@ -2,16 +2,19 @@
  <v-app>
   <div id="app">
     <div class="youth"><youth></youth></div>
+    <div class="crowd-funding"><crowd-funding></crowd-funding></div>
   </div>
    </v-app>
 </template>
 
 <script>
 import Youth from './components/Youth.vue'
+import CrowdFunding from './components/youth/CrowdFunding.vue'
 export default {
   name: 'App',
   components: {
-    Youth
+    Youth,
+    CrowdFunding
   },
   data: () => ({
     //

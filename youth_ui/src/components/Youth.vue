@@ -1,5 +1,5 @@
 <template>
-<section class="youth fade-in-bottom">
+  <section class="youth fade-in-bottom">
       <div id="container">
         <navigation-menu />
          <img
@@ -14,8 +14,7 @@
           <v-divider></v-divider>
         </v-card-text>      
         <home class="mb-15"/>
-        <footer-image />
-        <crowd-funding />
+        <footer-image />        
      </div>
      </section>
 </template>
@@ -24,7 +23,6 @@
 import NavigationMenu from './youth/NavigationMenu.vue'
 import Home from './youth/Home.vue'
 import FooterImage from './youth/FooterImage.vue'
-import CrowdFunding from './youth/CrowdFunding.vue'
 
 
 export default {
@@ -33,12 +31,11 @@ export default {
   components: {
     NavigationMenu,
     Home,
-    FooterImage,
-    CrowdFunding
+    FooterImage
   },
 
   data: () => ({
-    //
+ 
   }),
 };
 </script>

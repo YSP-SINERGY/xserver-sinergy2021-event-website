@@ -2,7 +2,7 @@
   <div class="crowd-funding">
     <v-btn
       v-scroll="onScroll"
-      class="orange darken-2"
+      class="crowd-funding-button"
       v-show="fab"
       dark
       fixed
@@ -45,12 +45,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.v-btn{
+<style lang="scss">
+.crowd-funding-button{
   border-radius:5px;
   margin-right: 5px;
-  // background-image: linear-gradient(-30deg,#1bffa7,#e37601);
-  // background-image: linear-gradient(-30deg,#22c2aa,#de19b0);
   background-image: linear-gradient(-90deg, #a4ca80, #13c49a);
 }
 </style>
