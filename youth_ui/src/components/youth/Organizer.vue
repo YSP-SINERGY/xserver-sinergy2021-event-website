@@ -12,7 +12,7 @@
         </div>
       </v-col>
       <v-col cols="12" sm="8">
-        <div class="organizer-text-box fade-in-bottom">
+        <div class="organizer-text-box">
           <p class="grey--text ma-0 font-size">
             S!NERGY2021実行委員代表
           </p>
@@ -134,23 +134,5 @@ export default {
     flex-direction: column-reverse;
   }
 }
-/*下からフェードイン*/
-.fade-in-bottom {
-   opacity: 0;
-   animation-delay: .3s;
-   animation-name: fadein-bottom;
-   animation-duration: 1.5s;
-   animation-timing-function: ease-out;
-   animation-fill-mode: forwards;
-}
-@keyframes fadein-bottom {
-   0% {
-      opacity: 0;
-      transform: translateY(20px);
-   }
-   100% {
-      opacity: 1;
-      transform: translateY(0);
-   }
-}
+
 </style>
