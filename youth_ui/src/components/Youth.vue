@@ -1,7 +1,6 @@
 <template>
   <section class="youth fade-in-bottom">
       <div id="container">
-        <navigation-menu />
          <img
           class = "mt-14" 
           src="@/assets/examples/top_youth.jpg" 
@@ -20,7 +19,6 @@
 </template>
 
 <script>
-import NavigationMenu from './youth/NavigationMenu.vue'
 import Home from './youth/Home.vue'
 import FooterImage from './youth/FooterImage.vue'
 
@@ -29,7 +27,6 @@ export default {
   name: 'Youth',
 
   components: {
-    NavigationMenu,
     Home,
     FooterImage
   },
