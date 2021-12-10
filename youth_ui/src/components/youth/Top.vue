@@ -55,7 +55,7 @@ iframe{
     margin-left: 8%;
   }
   padding: 8%;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 25px;
   text-align: justify;
   text-justify: inter-ideograph;
