@@ -1,4 +1,5 @@
 <template>
+ <section class="youth fade-in-bottom">
       <div id="container">
          <img
           class = "mt-14" 
@@ -14,6 +15,7 @@
         <home class="mb-15"/>
         <footer-image />        
      </div>
+  </section>
 </template>
 
 <script>
@@ -55,6 +57,7 @@ export default {
     font-size: 1rem;
   }
 }
+
 /*========= body背景色の変化CSS ===============*/
 
 @keyframes bggradient{
@@ -68,6 +71,23 @@ export default {
     background-position: 0% 50%;
   }
 }
-/*========= top_imageのAnimationCSS ===============*/
-
+/*下からフェードイン*/
+.fade-in-bottom {
+   opacity: 0;
+   animation-delay: .1s;
+   animation-name: fadein-bottom;
+   animation-duration: 0.5s;
+   animation-timing-function: ease-out;
+   animation-fill-mode: forwards;
+}
+@keyframes fadein-bottom {
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
 </style>
