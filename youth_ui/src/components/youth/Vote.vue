@@ -113,7 +113,7 @@
           id: 7, 
           desc: '園部達也',
           range: 'YSP活動を通して感じたことや学んだこと',
-          youtubeUrl: '<iframe width="560" height="315" src="https://www.youtube.com/embed/lUbQjAXRqKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
           imageUrl: require("@/assets/youth/y_7.jpg"),
           isShow: false
         },
