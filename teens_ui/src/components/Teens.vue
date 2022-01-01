@@ -71,5 +71,18 @@ export default {
     font-size: 1rem;
   }
 }
+/*========= body背景色の変化CSS ===============*/
+
+@keyframes bggradient{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 </style>
 

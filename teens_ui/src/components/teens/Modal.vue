@@ -62,10 +62,11 @@
                     確定する
                   </v-btn> -->
                   <v-btn
+                    class = "v-btn-arart"
                     color="orange darken-2"
                     text
                     @click="$emit('update:dialog', false)"
-                  >
+                  > 
                     <font size="-1"><strong>閉じる</strong></font>
                   </v-btn>
                 </v-card-actions>

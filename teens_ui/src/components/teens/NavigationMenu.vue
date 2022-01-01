@@ -57,7 +57,6 @@
           >
           Teens
         </v-toolbar-title>
-        <!-- <v-btn text class="text-caption">TEENS</v-btn> -->
         <v-spacer></v-spacer>
           <v-btn text v-scroll-to = "index1" class="hidden-xs-only">SINERGYについて</v-btn>
           <v-btn text v-scroll-to = "index2" class="hidden-xs-only">投票</v-btn>
@@ -120,6 +119,10 @@ export default {
 
 .navigationmenu {
     background-image: linear-gradient(-90deg, #62c9bf, #68acce);
+    background-size: 200% 200%;
+    animation: bggradient 10s ease infinite;
+    width: 100%;
+    height: 100vh;
 }
 
 .v-footer--fixed {
@@ -143,16 +146,19 @@ a {
   transition: all 0.3s;
 }
 .v-navigation-drawer{
+  background-size: 200% 200%;
+  animation: bggradient 10s ease infinite;
   text-align: center;
-  /* background-image: linear-gradient(-90deg, #8f9292, #47494f); */
   background-image: linear-gradient(-90deg, #62c9bf, #68acce);
-  // background-image: linear-gradient(-90deg, #767575, #242324);
 }
 .v-toolbar__content .v-btn.v-btn--icon.v-size--default, .v-toolbar__extension .v-btn.v-btn--icon.v-size--default {
     height: 48px;
     width: 48px;    
 }
-
+.text-caption{
+  margin-top: 5px;
+  margin-left: 5px;
+}
 @media only screen and (max-width: 600px) {
   ::v-deep {
     .v-toolbar__content {

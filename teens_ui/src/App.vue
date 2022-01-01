@@ -1,6 +1,5 @@
 <template>
  <v-app>
-
   <div id="app">
     <div class="teens"><teens></teens>
     </div>

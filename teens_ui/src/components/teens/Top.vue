@@ -12,7 +12,7 @@
      >
       <div class = "top-youtube">
         <iframe
-          src="https://www.youtube.com/embed/C9v-lhCLOQM"
+          src="https://www.youtube.com/embed/LYyG_tsCshc"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -21,11 +21,11 @@
      </v-container>
      <div class="top-msg-font">
         <p><strong>S!NERGY（シナジー)</strong><br><br>
-        それは、地域社会や世界をワクワクさせたい若者たちのプレゼン・イベントです。
-        『ワクワク』する若者の頂点として、一番ワクワクする『アイデア』と『熱量』を持つプレゼンターにベストシナジスト賞を贈っています。
-        2016年初開催以来、累計観客動員数は13,000名、Youtube総再生回数は約5万回を達成しました。
-        単なる思い出ではなく、『ワクワク』させることに本気になった友達や他プレゼンターを見て下さい。
-        あなたにも、その『ワクワク』が湧き出たことを感じるはずです。
+        それは、地域社会や世界をワクワクさせたい若者たちのプレゼン・イベント。<br><br>
+        そんな若者たちの頂点として、一番ワクワクする『アイデア』と『熱量』を持つプレゼンターにベストシナジスト賞（賞金30万円）を贈っている。<br><br>
+        2016年初開催以来、累計観客動員数は13,000名、Youtube総再生回数は約5万回を達成。<br><br>
+        一度きりの思い出ではなく、『ワクワク』させることに本気になった若者たちを見て下さい。<br><br>
+        あなたの『当たり前』が変わるはずです。<br>
         </p>
      </div>
   </div>
