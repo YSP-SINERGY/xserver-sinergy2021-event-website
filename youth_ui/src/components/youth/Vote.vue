@@ -28,7 +28,7 @@
           <v-btn
             @click="openModal(item)"
             :src="item.img_src"
-            color="blue-grey lighten-1"
+            color="blue-grey darken-4"
             class="white--text"
           >
             {{ item.desc }}
@@ -113,7 +113,7 @@
           id: 7, 
           desc: '園部達也',
           range: 'YSP活動を通して感じたことや学んだこと',
-          youtubeUrl: '<iframe width="560" height="315" src="https://www.youtube.com/embed/lUbQjAXRqKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+          youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
           imageUrl: require("@/assets/youth/y_7.jpg"),
           isShow: false
         },
@@ -130,13 +130,13 @@
           desc: '佐々木啓徳',
           range: '私の働き方',
           youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
-          imageUrl: require("@/assets/youth/boy.jpg"),
+          imageUrl: require("@/assets/youth/y_9.jpg"),
           isShow: false
         },
         { 
           id: 10, 
           desc: '源田礼奈',
-          range: 'ホームステイを通して世界平和を実現する」をビジョンとして',
+          range: '「ホームステイを通して世界平和を実現する」をビジョンとして',
           youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
           imageUrl: require("@/assets/youth/y_10.jpg"),
           isShow: false
@@ -162,13 +162,13 @@
           desc: '本田裕明',
           range: '人口減少',
           youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
-          imageUrl: require("@/assets/youth/boy.jpg"),
+          imageUrl: require("@/assets/youth/y_13.jpg"),
           isShow: false
         },
         { 
           id: 14, 
           desc: '福井咲良',
-          range: 'ソーシャルワーク　自分の経験を通してヤングケアラーを救う',
+          range: 'ソーシャルワーク',
           youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
           imageUrl: require("@/assets/youth/girl.jpg"),
           isShow: false

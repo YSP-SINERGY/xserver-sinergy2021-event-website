@@ -8,7 +8,7 @@
     <v-row>
       <v-col cols="12" sm="4" class="pa-0">
         <div class="zoom zoom-1">
-          <img src="@/assets/organizer/organizer4.jpg" alt="">
+          <img src="@/assets/organizer/organizer_1.jpg" alt="">
         </div>
       </v-col>
       <v-col cols="12" sm="8">
@@ -16,7 +16,7 @@
           <p class="grey--text ma-0 font-size">
             S!NERGY2021実行委員代表
           </p>
-          <h4 class="mb-2"><strong>青木晃胤</strong></h4>
+          <h4 class="mb-2 "><strong>青木晃胤</strong>  KOUIN AOKI</h4>
           <p class="mb-1">
             <strong>代表挨拶</strong><br>
           </p>
@@ -35,10 +35,9 @@
     <v-row class="column-reserve-row">
       <v-col cols="12" sm="8" class="margin-height-auto ">
         <div class="organizer-text-box">
-          <strong>さぁ、『常識』を覆そう。</strong><br><br>
-
+          <strong>さぁ、『常識』を覆そう。</strong><br><br>        
           <p class="font-size grey--text text--darken-2">
-            頑話す人も聞く人も全員が、あっと驚く、そんな少し先の世界を覗き見よう。<br>
+            話す人も聞く人も全員が、あっと驚く、そんな少し先の世界を覗き見よう。<br>
             そして、応援したい人がいたら、全力で応援しよう。<br><br>
             SNSのフォロワーになったり、商品を買ったり、何なら一緒に立ち上げてもいい。<br>
             コロンブスの時代には、SNSは無かったし、ECも無かったし、何なら、同乗者は受刑者だった。
@@ -48,10 +47,10 @@
       </v-col>
       <v-col cols="12" sm="4" class="pa-0">
         <div class="zoom zoom-1">
-          <img src="@/assets/organizer/organizer3.jpg" alt=""> 
+          <img src="@/assets/organizer/organizer_2.jpg" alt=""> 
         </div>
       </v-col>
-    </v-row>
+     </v-row>
   </v-container>
 </template>
 <script>
@@ -134,4 +133,5 @@ export default {
     flex-direction: column-reverse;
   }
 }
+
 </style>

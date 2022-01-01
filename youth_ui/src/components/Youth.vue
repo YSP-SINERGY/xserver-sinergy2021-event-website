@@ -1,7 +1,6 @@
 <template>
-<section class="youth">
+ <section class="youth fade-in-bottom">
       <div id="container">
-        <navigation-menu />
          <img
           class = "mt-14" 
           src="@/assets/examples/top_youth.jpg" 
@@ -13,42 +12,35 @@
           <p>S!NERGY 2021 特設サイト</p>
           <v-divider></v-divider>
         </v-card-text>      
-        <home class="mb-15" />
-        <footer-image />
-        <crowd-funding />
+        <home class="mb-15"/>
+        <footer-image />        
      </div>
-     </section>
+  </section>
 </template>
 
 <script>
-import NavigationMenu from './youth/NavigationMenu.vue'
 import Home from './youth/Home.vue'
 import FooterImage from './youth/FooterImage.vue'
-import CrowdFunding from './youth/CrowdFunding.vue'
-
 
 export default {
   name: 'Youth',
 
   components: {
-    NavigationMenu,
     Home,
-    FooterImage,
-    CrowdFunding
+    FooterImage
   },
 
   data: () => ({
-    //
+ 
   }),
 };
 </script>
 
 <style lang="scss">
 #container{
+  
   width: 100%;
-  /* background-image: linear-gradient(-90deg, #8f9292, #2e3036); */
-  // background-image: linear-gradient(-90deg, #767575, #242324);
-  background-image: linear-gradient(-90deg, #302b30, #18091f);
+  background-image: linear-gradient(- 100deg,#16170c,#7a7a98,#060629,#010102);
 }
 .home {
   max-width: 1200px;
@@ -64,5 +56,38 @@ export default {
     text-align: center;
     font-size: 1rem;
   }
+}
+
+/*========= body背景色の変化CSS ===============*/
+
+@keyframes bggradient{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*下からフェードイン*/
+.fade-in-bottom {
+   opacity: 0;
+   animation-delay: .1s;
+   animation-name: fadein-bottom;
+   animation-duration: 0.5s;
+   animation-timing-function: ease-out;
+   animation-fill-mode: forwards;
+}
+@keyframes fadein-bottom {
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }
 </style>

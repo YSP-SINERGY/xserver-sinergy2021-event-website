@@ -113,10 +113,12 @@ export default {
 <style lang="scss" scoped>
 
 .navigationmenu {
-  /* background-image: linear-gradient(-90deg, #666e6e, #202227); */
-  // background-image: linear-gradient(-90deg, #767575, #242324);
-  // background-image: linear-gradient(-90deg, #452f45, #1d0628);
-  background-image: linear-gradient(-90deg, #302b30, #18091f);
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(- 200deg,#16170c,#7a7a98,#060629,#010102);
+  background-size: 200% 200%;
+  animation: bggradient 10s ease infinite;
+
 }
 .v-footer--fixed {
   z-index: 1;
@@ -129,7 +131,6 @@ export default {
   color: rgba(255, 255, 255, 0.7);
     
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -140,9 +141,9 @@ a {
 }
 .v-navigation-drawer{
   text-align: center;
-  /* background-image: linear-gradient(-90deg, #8f9292, #47494f); */
-  background-image: linear-gradient(-90deg, #302b30, #18091f);
-  // background-image: linear-gradient(-90deg, #767575, #242324);
+  background-image: linear-gradient(- 300deg,#16170c,#7a7a98,#060629,#010102);
+  background-size: 200% 200%;
+  animation: bggradient 10s ease infinite;
 }
 .v-toolbar__content .v-btn.v-btn--icon.v-size--default, .v-toolbar__extension .v-btn.v-btn--icon.v-size--default {
     height: 48px;

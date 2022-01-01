@@ -15,6 +15,7 @@ import Vote from './Vote.vue'
 import Organizer from './Organizer.vue'
 import TwitterTimeline from './TwitterTimeline.vue'
 
+
 export default {
   name: 'Home',
   components: {

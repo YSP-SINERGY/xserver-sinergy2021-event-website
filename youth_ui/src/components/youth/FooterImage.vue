@@ -43,12 +43,11 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 .v-card{
-  // background-image: linear-gradient(-90deg, #666e6e, #202227);
-  // background-image: linear-gradient(-90deg, #6f6b6b, #1c1c1c);
-  background-image: linear-gradient(-90deg, #302b30, #18091f);
+  background-image: linear-gradient(- 200deg,#16170c,#7a7a98,#060629,#010102);
+  background-size: 200% 200%;
+  animation: bggradient 10s ease infinite;
 }
 .v-footer{
   display: block !important;

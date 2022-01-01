@@ -2,7 +2,7 @@
   <div class="crowd-funding">
     <v-btn
       v-scroll="onScroll"
-      class="green darken-1"
+      class="crowd-funding-button"
       v-show="fab"
       dark
       fixed
@@ -10,8 +10,11 @@
       right
       :href="'https://camp-fire.jp/projects/view/522896'"
       target="_blank" 
-    >    
-      支援
+    >         
+        <img 
+          src="@/assets/examples/synergy.png"
+          class = "synergy-icon mr-1">
+      支援  
     </v-btn>
   </div>  
 </template>
@@ -46,9 +49,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.v-btn{
-  border-radius:5px;
+::v-deep {
+.crowd-funding-button{
+  border-radius: 5px;
   margin-right: 5px;
-  background-image: linear-gradient(-90deg, #a4ca80, #13c49a);
+  font-size: 1rem;
+  width: 80px;
+  background-image: linear-gradient(- 400deg,#16170c,#7a7a98,#060629,#010102);
 }
+.synergy-icon{
+  width: 0.7%;
+}
+}
+
 </style>

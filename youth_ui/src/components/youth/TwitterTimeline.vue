@@ -34,7 +34,6 @@ export default {
   },
   data () {
     return {
-      // ここにタイムラインを表示させたいアカウント名を追加する
       user_ids: ['ergy_sin']
     };
   }

@@ -31,7 +31,7 @@
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                 variant="secondary"
-                color="blue-grey lighten-1"
+                color="blue-grey darken-4"
                 class="white--text"
                 v-bind="attrs"
                 v-on="on"
@@ -41,7 +41,7 @@
             <v-alert
             border="left"
             colored-border
-            color="light-green accent-4"
+            color="blue-grey darken-1"
             type="error"
             elevation="2"    
             width="100%"
@@ -52,7 +52,7 @@
                 <!-- <strong>投票を確定しますか？</strong> -->
                 <font size="-1"><strong>投票期間ではありません。</strong></font>
                 </v-card-title>
-                <v-card-actions>s
+                <v-card-actions>
                   <v-spacer></v-spacer>
                   <!-- <v-btn
                     color="warning"
@@ -62,7 +62,7 @@
                     確定する
                   </v-btn> -->
                   <v-btn
-                    color="green darken-2"
+                    color="blue-grey darken-1"
                     text
                     @click="$emit('update:dialog', false)"
                   >
@@ -116,19 +116,9 @@
 
 
 <style scoped>
-.btn-vote {
-  width: 20%;
-  background: #2c2c3f;
-  background: -webkit-linear-gradient(to right, #596166, #47474b);  
-  background: linear-gradient(to right, #757c81, #3b3b46);
-  color: #fff;
-  border: 1px solid #eee;
-}
+
 .btn-rounded {
   border-radius: 20px;
-}
-.v-card{
-  background-image: linear-gradient(-90deg, #e5ebeb, #f8f9ff);
 }
 .name-box {
   border-bottom: solid 1px ;

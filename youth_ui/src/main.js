@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+
 /*ここから*/
 import vuetify from './plugins/vuetify'; // add
 import VueScrollTo from 'vue-scrollto'; // add
