@@ -4,6 +4,7 @@
     persistent
     max-width="695"
     max-height="650"
+    color= "white"
   >
     <v-card>            
       <div class="text-center">  
@@ -15,13 +16,15 @@
             :src="item.youtubeUrl"
             title="YouTube video player"
             frameborder="0"
-            class="mt-6"
+            class="mt-5"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
-          <div class="text-center px-6">
-            <h4 class="py-3 name-box">{{ item.desc }}</h4>
-            <p>{{ item.range }}</p>
+          <div class="px-1 ">
+            <h4 class="py-3 name-box text-h5">{{ item.desc }}</h4>
+            <!-- <p>{{ item.range }}</p> -->
+            <h5 class="text-center px-5 mt-6 mb-6 text-h6" v-html="item.range"></h5>
+            <p class="text-left px-5 pb-6 text-caption" v-html="item.explanation"></p>
           </div>
           <v-dialog
             v-model="confirmDialog"
@@ -31,7 +34,7 @@
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                 variant="secondary"
-                color="blue-grey lighten-1"
+                color="blue-grey darken-4"
                 class="white--text"
                 v-bind="attrs"
                 v-on="on"
@@ -41,7 +44,7 @@
             <v-alert
             border="left"
             colored-border
-            color="orange accent-4"
+            color="blue-grey darken-1"
             type="error"
             elevation="2"    
             width="100%"
@@ -62,11 +65,10 @@
                     確定する
                   </v-btn> -->
                   <v-btn
-                    class = "v-btn-arart"
-                    color="orange darken-2"
+                    color="blue-grey darken-1"
                     text
                     @click="$emit('update:dialog', false)"
-                  > 
+                  >
                     <font size="-1"><strong>閉じる</strong></font>
                   </v-btn>
                 </v-card-actions>
@@ -117,21 +119,17 @@
 
 
 <style scoped>
-.btn-vote {
-  width: 20%;
-  background: #2c2c3f;
-  background: -webkit-linear-gradient(to right, #596166, #47474b);  
-  background: linear-gradient(to right, #757c81, #3b3b46);
-  color: #fff;
-  border: 1px solid #eee;
+.text-center{
+  background-color: rgb(246, 248, 248);
+}
+.text-right{
+  background-color: rgb(246, 248, 248);
 }
 .btn-rounded {
   border-radius: 20px;
 }
-.v-card{
-  background-image: linear-gradient(-90deg, #e5ebeb, #f8f9ff);
-}
 .name-box {
   border-bottom: solid 1px ;
 }
+
 </style>
