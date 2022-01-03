@@ -21,7 +21,8 @@
           />
           <div class="text-center px-6">
             <h4 class="py-3 name-box">{{ item.desc }}</h4>
-            <p>{{ item.range }}</p>
+            <h5 class="mb-2" v-html="item.range"></h5>
+            <p class="pb-3" v-html="item.explanation"></p>
           </div>
           <v-dialog
             v-model="confirmDialog"
