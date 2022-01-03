@@ -3,7 +3,7 @@
       <div id="container">
          <img
           class = "mt-14" 
-          src="@/assets/examples/top_youth.jpg" 
+          src="@/assets/examples/top_youth_mini.jpg" 
           width="100%"
         > 
         <v-card-text
