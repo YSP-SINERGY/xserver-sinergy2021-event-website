@@ -68,7 +68,7 @@
           text 
           class="hidden-xs-only"
           style="text-transform: none"
-          :href="'https://sinergy2021.org/teens'"
+          :href="'https://dev.sinergy2021.org/teens'"
           target="_blank"
         >
           Teens
