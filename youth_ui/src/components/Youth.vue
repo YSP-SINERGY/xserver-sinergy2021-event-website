@@ -2,6 +2,7 @@
  <section class="youth fade-in-bottom">
       <div id="container">
          <img
+          alt = "プレゼン シナジー2021 youth"
           class = "mt-14" 
           src="@/assets/examples/top_youth_mini.jpg" 
           width="100%"
