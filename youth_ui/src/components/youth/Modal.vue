@@ -15,13 +15,15 @@
             :src="item.youtubeUrl"
             title="YouTube video player"
             frameborder="0"
-            class="mt-6"
+            class="mt-5"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
-          <div class="text-center px-6">
-            <h4 class="py-3 name-box">{{ item.desc }}</h4>
-            <p>{{ item.range }}</p>
+          <div class="px-1 ">
+            <h4 class="py-3 name-box text-h5">{{ item.desc }}</h4>
+            <!-- <p>{{ item.range }}</p> -->
+            <h5 class="text-center px-5 mt-6 mb-6 text-h6" v-html="item.range"></h5>
+            <p class="text-left px-5 pb-6 text-caption" v-html="item.explanation"></p>
           </div>
           <v-dialog
             v-model="confirmDialog"
@@ -123,4 +125,5 @@
 .name-box {
   border-bottom: solid 1px ;
 }
+
 </style>

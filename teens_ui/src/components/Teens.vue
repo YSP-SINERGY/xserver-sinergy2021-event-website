@@ -6,7 +6,7 @@
         <img
           alt = "topimage"
           class = "mt-14" 
-          src="@/assets/examples/top_teens.jpg" 
+          src="@/assets/examples/top_teens_mini.jpg" 
           width="100%"
         >
         <v-card-text
