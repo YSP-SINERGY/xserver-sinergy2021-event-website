@@ -8,7 +8,7 @@
     <v-row>
       <v-col cols="12" sm="4" class="pa-0">
         <div class="zoom zoom-1">
-          <img src="@/assets/organizer/organizer4.jpg" alt=""> 
+          <img src="@/assets/organizer/oorganizer1-min.jpg" alt=""> 
         </div>
       </v-col>
       <v-col cols="12" sm="8" class="margin-height-auto">
@@ -46,7 +46,7 @@
       </v-col>
       <v-col cols="12" sm="4" class="pa-0">
         <div class="zoom zoom-1">
-          <img src="@/assets/organizer/organizer3.jpg" alt=""> 
+          <img src="@/assets/organizer/organizer2-min.jpg" alt=""> 
         </div>
       </v-col>
     </v-row>
