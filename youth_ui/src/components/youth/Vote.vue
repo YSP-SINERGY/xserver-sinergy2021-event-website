@@ -142,22 +142,6 @@
           imageUrl: require("@/assets/youth/y_kumatani.jpg"),
           isShow: false
         },
-        // { 
-        //   id: 9, 
-        //   desc: '佐々木啓徳',
-        //   range: '私の働き方',
-        //   youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
-        //   imageUrl: require("@/assets/youth/y_9.jpg"),
-        //   isShow: false
-        // },
-        // { 
-        //   id: 10, 
-        //   desc: '源田礼奈',
-        //   range: '「ホームステイを通して世界平和を実現する」をビジョンとして',
-        //   youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
-        //   imageUrl: require("@/assets/youth/y_10.jpg"),
-        //   isShow: false
-        // },
         { 
           id: 10,
           desc: '本田裕明',
