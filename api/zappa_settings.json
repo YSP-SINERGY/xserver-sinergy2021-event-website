@@ -2,9 +2,9 @@
     "dev": {
         "app_function": "run.app",
         "aws_region": "ap-northeast-1",
-        "profile_name": "default",
+        "profile_name": "zappa2",
         "project_name": "api",
         "runtime": "python3.9",
-        "s3_bucket": "zappa-1993kkzy3"
+        "s3_bucket": "zappa-vbpxuqs8f"
     }
 }
