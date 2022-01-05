@@ -139,23 +139,24 @@
           range: '「共生・共栄・共義」ここに未来が有る',
           explanation: '世界情勢を見て、不安を感じたことはありませんか？</br></br>世界は過去に1度も平和を見たことがありません。</br>このまま進んでも未来は見えないかもしれません。</br></br>「共生・共栄・共義」が鍵になると思っています！',
           youtubeUrl: 'https://www.youtube.com/embed/w01sRY9hgdc',//動画未取得>元々のurlに問題あり
-          imageUrl: require("@/assets/youth/girl.jpg"),
+          imageUrl: require("@/assets/youth/y_kumatani.jpg"),
+          isShow: false
+        },
+        { 
+          id: 10,
+          desc: '本田裕明',
+          range: '長崎市の人口減少ってやばくね？</br>【未来世代まで幸せになれる長崎を目指して】',
+          explanation: '長崎って来たことありますか？</br>長崎って山に囲まれ海に囲まれ、観光名所に囲まれている魅力溢れる都市。それが私の町です！</br>そんな私の町をもっと盛り上げていけるようなアイディアを発表します！',
+          youtubeUrl: 'https://www.youtube.com/embed/XBPcUFKLh0o',
+          imageUrl: require("@/assets/youth/y_honda.jpg"),
           isShow: false
         },
         // { 
-        //   id: 10, //連絡なし、追加可能性あり
+        //   id: 11, //辞退連絡
         //   desc: '木村晃介',
         //   range: 'SDGsと科学技術',
         //   youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
         //   imageUrl: require("@/assets/youth/boy.jpg"),
-        //   isShow: false
-        // },
-        // { 
-        //   id: 11, //連絡なし、追加可能性あり
-        //   desc: '本田裕明',
-        //   range: '人口減少',
-        //   youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
-        //   imageUrl: require("@/assets/youth/y_13.jpg"),
         //   isShow: false
         // },
         // { 
