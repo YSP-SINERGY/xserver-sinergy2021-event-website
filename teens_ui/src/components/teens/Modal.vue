@@ -51,18 +51,20 @@
               <v-card-title 
               class="text-subtitle-1 justify-center"
               >
-                <!-- <strong>投票を確定しますか？</strong> -->
-                <font size="-1"><strong>投票期間ではありません。</strong></font>
+                <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
+                <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font>
+                <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font>
+                <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
                 </v-card-title>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <!-- <v-btn
+                  <v-btn v-if="check_if_voting_period() && !check_if_voted()"
                     color="warning"
                     text
                     @click="sendVote"
                   >
                     確定する
-                  </v-btn> -->
+                  </v-btn>
                   <v-btn
                     color="blue-grey darken-1"
                     text
@@ -91,6 +93,8 @@
 </template>
 
 <script>
+  import VueCookies from 'vue-cookies';
+  import axios from 'axios';
   export default {
     name: 'Modal',
     props: {
@@ -99,7 +103,7 @@
     },
     data () {
       return {
-        confirmDialog: false
+        confirmDialog: false,
       }
     },
     watch: {
@@ -109,9 +113,41 @@
       }
     },
     methods: {
-      sendVote () {
-        console.log('to be continue...')
-      }
+      async sendVote () {
+        // make a PATCH request to youth vote endpoint
+        const endpoint = "https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/"; // 本番ではproductionに切り替える。
+        try {
+          await axios.patch(
+            endpoint,
+            { id: this.item.id }
+          );
+          alert("投票完了しました。");
+          // 投票成功したら
+          VueCookies.set('teens_if_voted', true);
+        } catch (error) {
+          this.error = error.response;
+          console.log(this.error);
+          alert("投票ができませんでした。");
+        }
+        this.$emit('update:dialog', false);
+      },
+      check_if_voting_period () {
+        let vote_date = VueCookies.get('teens_vote_date');
+        // if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) >= vote_date) 
+        //     && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
+        if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
+          && (vote_date < new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
+          return true;
+        }
+      },
+      check_if_voted() {
+        let if_voted = VueCookies.get('teens_if_voted')
+        if (if_voted === 'true') {
+          return true
+        } else if (if_voted === 'false') {
+          return false
+        }
+      },
     }
   }
 </script>
