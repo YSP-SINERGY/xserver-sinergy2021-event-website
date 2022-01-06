@@ -51,8 +51,10 @@
               <v-card-title 
               class="text-subtitle-1 justify-center"
               >
-                <!-- <strong>投票を確定しますか？</strong> -->
-                <font size="-1"><strong>投票期間ではありません。</strong></font>
+                <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
+                <strong v-if="check_if_voting_period(vote_date) && !(if_voted)">投票を確定しますか？</strong>
+                <font size="-1" v-else-if="check_if_voting_period(vote_date) && (if_voted)"><strong>本日は既に投票済みです。</strong></font>
+                <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
                 </v-card-title>
                 <v-card-actions>
                   <v-spacer></v-spacer>
@@ -91,6 +93,7 @@
 </template>
 
 <script>
+  import VueCookies from 'vue-cookies';
   export default {
     name: 'Modal',
     props: {
@@ -99,7 +102,9 @@
     },
     data () {
       return {
-        confirmDialog: false
+        confirmDialog: false,
+        vote_date: VueCookies.get('vote_date'),
+        if_voted: VueCookies.get('if_voted'),
       }
     },
     watch: {
@@ -110,8 +115,16 @@
     },
     methods: {
       sendVote () {
-        console.log('to be continue...')
-      }
+        console.log('to be continue...') // apiを実装後に実装する。
+        // 投票成功したら
+        VueCookies.set('if_voted', true);
+      },
+      check_if_voting_period (vote_date) {
+        if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) >= vote_date) 
+            && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
+          return true;
+        }
+      },
     }
   }
 </script>
