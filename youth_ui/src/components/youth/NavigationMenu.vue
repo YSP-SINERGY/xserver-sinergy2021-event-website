@@ -30,7 +30,7 @@
           text 
           style="text-transform: none"
           class="white--text mt-2"
-          :href="'https://sinergy2021.org/teens'"
+          :href="'https://dev.sinergy2021.org/teens'"
           target="_blank"
         >
           Teensページへ移動
@@ -68,7 +68,7 @@
           text 
           class="hidden-xs-only"
           style="text-transform: none"
-          :href="'https://sinergy2021.org/teens'"
+          :href="'https://dev.sinergy2021.org/teens'"
           target="_blank"
         >
           Teens
