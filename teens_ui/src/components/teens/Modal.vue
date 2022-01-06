@@ -113,10 +113,21 @@
       }
     },
     methods: {
-      sendVote () {
-        console.log('to be continue...') // apiを実装後に実装する。
-        // 投票成功したら
-        VueCookies.set('if_voted', true);
+      async sendVote () {
+        // make a PATCH request to youth vote endpoint
+        const endpoint = "https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/";
+        try {
+          await axios.patch({
+            url: endpoint,
+            data: { id: this.val.id }
+          });
+          alert("投票完了しました。")
+          // 投票成功したら
+          VueCookies.set('if_voted', true);
+        } catch (error) {
+          this.error = error.response;
+          console.log(this.error);
+        }
       },
       check_if_voting_period (vote_date) {
         if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) >= vote_date) 
