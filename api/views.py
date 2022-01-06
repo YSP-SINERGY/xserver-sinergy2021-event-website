@@ -4,7 +4,7 @@ from flask_restful import Resource
 from sqlalchemy import text as sql_text
 
 
-class YouthVote(Resource):
+class YouthVote(Resource): # YouthページでAPIリクエスト時のロジックを制御するクラス
     """ The votes View """
 
     def __init__(self):
@@ -40,7 +40,7 @@ class YouthVote(Resource):
         except:
             return False
 
-class TeensVote(Resource):
+class TeensVote(Resource): # TeensページでAPIリクエスト時のロジックを制御するクラス
     """ The votes View """
 
     def __init__(self):
