@@ -5,6 +5,8 @@
       <div class="voting-system"><voting-system></voting-system></div>
       <div class="vote"><vote></vote></div>
       <div class="organizer"><organizer></organizer></div>
+      <div class="sponsor"><sponsor></sponsor></div>
+      <div class="contributor"><contributor></contributor></div>
       <div class="twitter-timeline"><twitter-timeline /></div>
     </div>
   </div>
@@ -16,6 +18,8 @@ import Vote from './Vote.vue'
 import Organizer from './Organizer.vue'
 import TwitterTimeline from './TwitterTimeline.vue'
 import VotingSystem from './VotingSystem.vue'
+import Sponsor from './Sponsor.vue'
+import Contributor from './Contributor.vue'
 
 
 export default {
@@ -25,7 +29,9 @@ export default {
     Vote,
     Organizer,
     TwitterTimeline,
-    VotingSystem 
+    VotingSystem,
+    Sponsor,
+    Contributor
     
   },
   props: {
