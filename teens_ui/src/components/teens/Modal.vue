@@ -47,16 +47,6 @@
               class="justify-center text-h6 "
               >
                 <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
-<<<<<<< HEAD
-                <font size="-1" ><strong>投票を確定しますか？</strong></font>
-                <!-- <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font> -->
-                <!-- <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font> -->
-                <!-- <font size="-1" v-else><strong>投票期間ではありません。</strong></font> -->
-              </v-card-title>
-
-                <v-card-actions>
-                  <v-spacer></v-spacer>
-=======
                 <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font>
                 <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font>
                 <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
@@ -70,7 +60,6 @@
                   >
                     確定する
                   </v-btn>
->>>>>>> クッキー基盤の投票機能を実装しました。 (#23)
                   <v-btn
                     color="blue-grey darken-1"
                     text
@@ -158,9 +147,11 @@
         this.$emit('update:dialog', false);
       },
       check_if_voting_period () {
-        let vote_date = VueCookies.get('youth_vote_date');
+        let vote_date = VueCookies.get('teens_vote_date');
         if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) >= vote_date) 
             && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
+        // if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
+        //   && (vote_date < new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
           return true;
         }
         // if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
