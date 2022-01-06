@@ -47,6 +47,7 @@
               class="justify-center text-h6 "
               >
                 <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
+<<<<<<< HEAD
                 <font size="-1" ><strong>投票を確定しますか？</strong></font>
                 <!-- <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font> -->
                 <!-- <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font> -->
@@ -55,6 +56,21 @@
 
                 <v-card-actions>
                   <v-spacer></v-spacer>
+=======
+                <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font>
+                <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font>
+                <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
+                </v-card-title>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn v-if="check_if_voting_period() && !check_if_voted()"
+                    color="warning"
+                    text
+                    @click="sendVote"
+                  >
+                    確定する
+                  </v-btn>
+>>>>>>> クッキー基盤の投票機能を実装しました。 (#23)
                   <v-btn
                     color="blue-grey darken-1"
                     text
@@ -122,7 +138,7 @@
     methods: {
       async sendVote () {
         // make a PATCH request to youth vote endpoint
-        const endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/youth_votes/`; // 本番ではproductionに切り替える
+        const endpoint = "https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/"; // 本番ではproductionに切り替える。
         try {
           await axios.patch(
             endpoint,

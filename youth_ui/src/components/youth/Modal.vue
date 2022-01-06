@@ -47,14 +47,19 @@
               class="justify-center text-h6 "
               >
                 <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
-                <font size="-1" ><strong>投票を確定しますか？</strong></font>
-                <!-- <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font> -->
-                <!-- <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font> -->
-                <!-- <font size="-1" v-else><strong>投票期間ではありません。</strong></font> -->
-              </v-card-title>
-
+                <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font>
+                <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font>
+                <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
+                </v-card-title>
                 <v-card-actions>
                   <v-spacer></v-spacer>
+                  <v-btn v-if="check_if_voting_period() && !check_if_voted()"
+                    color="warning"
+                    text
+                    @click="sendVote"
+                  >
+                    確定する
+                  </v-btn>
                   <v-btn
                     color="blue-grey darken-1"
                     text

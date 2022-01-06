@@ -61,6 +61,7 @@
 </template>
 
 <script>
+  import VueCookies from 'vue-cookies';
   import Modal from './Modal.vue'
   import applicationForm from './ApplicationForm.vue'
 
@@ -195,6 +196,10 @@
     },
     methods: {
       openModal (item) {
+        if (!(VueCookies.isKey('youth_vote_date'))) {
+          VueCookies.set('youth_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
+          VueCookies.set('youth_if_voted', false);
+        }
         this.selectedItem = item;
         console.log(item);
         
