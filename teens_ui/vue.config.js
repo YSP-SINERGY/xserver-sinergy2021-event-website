@@ -6,7 +6,7 @@ module.exports = {
   pages: {
     index: {
       entry: "src/main.js",
-      title: "sinergy"
+      title: "シナジー2021特設サイト-中高生(Teens)"
     }
   }
 }

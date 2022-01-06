@@ -1,7 +1,7 @@
 <template>
  <div class = "twitter-timeline">
    <h1 class="head-border my-15">
-        <strong>SNSにて情報発信中</strong>
+        SNSにて情報発信中
     </h1>
   <v-container>
         <v-row>

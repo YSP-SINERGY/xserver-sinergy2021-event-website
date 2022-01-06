@@ -4,7 +4,7 @@
         <navigation-menu />
         <div class= "realizeimage" />
         <img
-          alt = "topimage"
+          alt = "プレゼン シナジー2021 teens"
           class = "mt-14" 
           src="@/assets/examples/top_teens_mini.jpg" 
           width="100%"
@@ -12,7 +12,7 @@
         <v-card-text
          class="white--text text-center"
         >
-        <p>S!NERGY Teens 2021 特設サイト</p>
+        <strong>S!NERGY Teens 2021 特設サイト</strong>
         <v-divider></v-divider>
         </v-card-text> 
         <home class="mb-15" />

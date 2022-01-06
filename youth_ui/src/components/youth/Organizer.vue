@@ -2,7 +2,7 @@
   <v-container>
     <h1 class="head-border mt-15 mb-15">
       <a id="index3">
-        <strong>ORGANIZER</strong>
+        ORGANIZER
       </a>
     </h1>
     <v-row>

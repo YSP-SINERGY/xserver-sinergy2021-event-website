@@ -2,7 +2,7 @@
   <v-container>
     <h1 class="head-border mt-15 mb-10">
       <a id="index2">
-        <strong>PRESENTER</strong>
+        PRESENTER
       </a>
     </h1>
     <div >
