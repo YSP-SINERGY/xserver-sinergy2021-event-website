@@ -41,9 +41,9 @@ export default {
     
   },
 }
-</script scoped>
+</script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .v-card{
   background-image: linear-gradient(-90deg, #62c9bf, #68acce);
 
