@@ -8,48 +8,89 @@
     <v-row>
       <v-col cols="12" sm="4" class="pa-0">
         <div class="zoom zoom-1">
-          <img src="@/assets/organizer/organizer1-min.jpg" alt=""> 
+          <img src="@/assets/organizer/organizer1-min.jpg" alt="">
         </div>
       </v-col>
-      <v-col cols="12" sm="8" class="margin-height-auto">
+      <v-col cols="12" sm="8">
         <div class="organizer-text-box">
           <p class="grey--text ma-0 font-size">
             S!NERGY2021実行委員代表
           </p>
-            <h4 class="mb-2"><strong>青木晃胤</strong></h4>
+          <h4 class="mb-2 "><strong>青木晃胤</strong>  KOUIN AOKI</h4>
           <p class="mb-1">
             <strong>代表挨拶</strong><br>
           </p>
-          <p class="font-size grey--text text--darken-2">
+          <p class="
+            font-size 
+            grey--text 
+            text--darken-2 
+            hidden-sm-and-up"
+          > <br>
             みんなは、『好きな人』はいるだろうか。<br>
-            あるいは、『好きなこと』はあるだろうか。<br>
+            あるいは、『好きなこと』はあるだろうか。<br><br>
             誰かを好きになったり、何か熱中することが出来るのは、きっと僕らの特権のように思う。<br><br>
             だから僕はこのサイトに来てくれた人にお願いしたい。<br><br>
             何かに熱中して、頑張っている人を良く見て、応援して欲しい。<br>
             堂々と発表している裏で一生懸命練習していたこと、先輩に詰められたこと、アイデアが浮かばなくて泣いたこと、全てひっくるめて、『かっこいい』と思わない？<br><br>
           </p>
+
+          <p class="
+            font-size 
+            grey--text 
+            text--darken-2 
+            hidden-sm-and-down
+            text-subtitle-1"
+          ><br>
+            みんなは、『好きな人』はいるだろうか。<br>
+            あるいは、『好きなこと』はあるだろうか。<br>
+            誰かを好きになったり、何か熱中することが出来るのは、きっと僕らの特権のように思う。<br>
+            だから僕はこのサイトに来てくれた人にお願いしたい。<br>
+            何かに熱中して、頑張っている人を良く見て、応援して欲しい。<br>
+            堂々と発表している裏で一生懸命練習していたこと、先輩に詰められたこと、アイデアが浮かばなくて泣いたこと、全てひっくるめて、『かっこいい』と思わない？<br><br>
+          </p>
+
         </div>
       </v-col>
     </v-row>
     <v-row class="column-reserve-row">
       <v-col cols="12" sm="8" class="margin-height-auto">
-        <div class="organizer-text-box">
-          <strong>さぁ、『常識』をひっくり返そう</strong><br><br>
+        <div class="organizer-text-box hidden-sm-and-up ">
 
-          <p class="font-size grey--text text--darken-2">
+          <strong>さぁ、『常識』を覆そう。</strong><br><br>        
+          <p class="
+            font-size 
+            grey--text 
+            text--darken-2"
+          >
             頑張る人を見て、自分を変えたいと思った人もきっといるだろう。<br>
             頑張る人を見る だけでは、もの足りなくなった人もきっといるだろう。<br><br>
-            そう思ったなら、君は、『好きなこと』がある人だ。<br>
+            そう思ったなら、君は、『好きなこと』がある人だ。<br><br>
             さぁ、『常識』をひっくり返す、ワクワクするプレゼンに出会おう。<br><br>
           </p>
         </div>
+
+        <div class="organizer-text-box hidden-sm-and-down">
+          <strong>さぁ、『常識』を覆そう。</strong><br><br>        
+          <p class="
+            font-size 
+            grey--text 
+            text--darken-2 
+            text-subtitle-1"
+          >
+            頑張る人を見て、自分を変えたいと思った人もきっといるだろう。<br>
+            頑張る人を見る だけでは、もの足りなくなった人もきっといるだろう。<br><br>
+            そう思ったなら、君は、『好きなこと』がある人だ。<br><br>
+            さぁ、『常識』をひっくり返す、ワクワクするプレゼンに出会おう。
+          </p>
+        </div>
+
       </v-col>
       <v-col cols="12" sm="4" class="pa-0">
         <div class="zoom zoom-1">
           <img src="@/assets/organizer/organizer2-min.jpg" alt=""> 
         </div>
       </v-col>
-    </v-row>
+     </v-row>
   </v-container>
 </template>
 <script>
@@ -100,9 +141,7 @@ export default {
 @keyframes animationZoom2 {
   50% { transform:scale(1.1)} 
 }
-.margin-height-auto {
-  margin: auto 0;
-}
+
 .p-class {
   padding: 8%;
   line-height: 25px;
@@ -113,8 +152,12 @@ export default {
   font-size: 0.7rem;
 }
 .organizer-text-box {
+  height: auto;
   text-align: left;
   padding: 0 3%;
+}
+.margin-height-auto {
+  margin: auto 0;
 }
 @media only screen and (max-width: 600px) {
   .font-size {
@@ -130,4 +173,5 @@ export default {
     flex-direction: column-reverse;
   }
 }
+
 </style>

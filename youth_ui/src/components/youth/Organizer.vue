@@ -20,23 +20,50 @@
           <p class="mb-1">
             <strong>代表挨拶</strong><br>
           </p>
-          <p class="font-size grey--text text--darken-2">
+          <p class="
+            font-size 
+            grey--text 
+            text--darken-2 
+            hidden-sm-and-up"
+          >
             あなたは、『コロンブスの卵』を聞いたことがあるだろうか。<br>
             誰でも出来る簡単な事でも、最初に行うのは難しいことの喩えなのだが、
-            どうにもいつの時代も最初に思いつくのは『常識』に囚われていない人の様に思える。<br>
-            彼らは、心の赴くままに他の人が出来ないことをやり遂げる。<br><br>
+            どうにもいつの時代も最初に思いつくのは『常識』に囚われていない人の様に思える。<br><br>
+            彼らは、心の赴くままに他の人が出来ないことをやり遂げる。<br>
             僕は、今年のS!NERGYのテーマを決める時、<br><br>『常識を覆せ』をテーマにしたいと思った。<br><br>
             Withコロナ/Afterコロナの時代には、心の赴くままに、新しい『常識』を見出している人がたくさんいるのではないかと感じたことがきっかけだ。<br>
             そんな人たちと出会えたなら、どんなにワクワクするだろう。<br><br>
           </p>
+
+          <p class="
+            font-size 
+            grey--text 
+            text--darken-2 
+            hidden-sm-and-down
+            text-subtitle-1"
+          >
+            あなたは、『コロンブスの卵』を聞いたことがあるだろうか。<br>
+            誰でも出来る簡単な事でも、最初に行うのは難しいことの喩えなのだが、
+            どうにもいつの時代も最初に思いつくのは『常識』に囚われていない人の様に思える。<br>
+            彼らは、心の赴くままに他の人が出来ないことをやり遂げる。<br>
+            僕は、今年のS!NERGYのテーマを決める時、『常識を覆せ』をテーマにしたいと思った。<br>
+            Withコロナ/Afterコロナの時代には、心の赴くままに、新しい『常識』を見出している人がたくさんいるのではないかと感じたことがきっかけだ。<br>
+            そんな人たちと出会えたなら、どんなにワクワクするだろう。<br><br>
+          </p>
+
         </div>
       </v-col>
     </v-row>
     <v-row class="column-reserve-row">
-      <v-col cols="12" sm="8" class="margin-height-auto ">
-        <div class="organizer-text-box">
+      <v-col cols="12" sm="8" class="margin-height-auto">
+        <div class="organizer-text-box hidden-sm-and-up ">
+
           <strong>さぁ、『常識』を覆そう。</strong><br><br>        
-          <p class="font-size grey--text text--darken-2">
+          <p class="
+            font-size 
+            grey--text 
+            text--darken-2"
+          >
             話す人も聞く人も全員が、あっと驚く、そんな少し先の世界を覗き見よう。<br>
             そして、応援したい人がいたら、全力で応援しよう。<br><br>
             SNSのフォロワーになったり、商品を買ったり、何なら一緒に立ち上げてもいい。<br>
@@ -44,6 +71,23 @@
             さぁ、あなたの『常識』を覆す一人に出会うのは、今日だ。<br><br>
           </p>
         </div>
+
+        <div class="organizer-text-box hidden-sm-and-down">
+          <strong>さぁ、『常識』を覆そう。</strong><br><br>        
+          <p class="
+            font-size 
+            grey--text 
+            text--darken-2 
+            text-subtitle-1"
+          >
+            話す人も聞く人も全員が、あっと驚く、そんな少し先の世界を覗き見よう。<br>
+            そして、応援したい人がいたら、全力で応援しよう。<br>
+            SNSのフォロワーになったり、商品を買ったり、何なら一緒に立ち上げてもいい。<br><br>
+            コロンブスの時代には、SNSは無かったし、ECも無かったし、何なら、同乗者は受刑者だった。<br>
+            さぁ、あなたの『常識』を覆す一人に出会うのは、今日だ。
+          </p>
+        </div>
+
       </v-col>
       <v-col cols="12" sm="4" class="pa-0">
         <div class="zoom zoom-1">
