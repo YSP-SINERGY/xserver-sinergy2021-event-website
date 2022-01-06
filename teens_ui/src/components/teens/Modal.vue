@@ -21,9 +21,8 @@
             allowfullscreen
           />
           <div class="px-1 ">
-            <h4 class="py-3 name-box text-h5">{{ item.desc }}</h4>
-            <!-- <p>{{ item.range }}</p> -->
-            <h5 class="text-center px-5 mt-6 mb-6 text-h6" v-html="item.range"></h5>
+            <h4 class="py-3 name-box text-h5">{{ item.presenter }}</h4>
+            <h5 class="text-center px-5 mt-6 mb-6 text-h6" v-html="item.caption"></h5>
             <p class="text-left px-5 pb-6 text-caption" v-html="item.explanation"></p>
           </div>
           <v-dialog
@@ -52,10 +51,8 @@
               <v-card-title 
               class="text-subtitle-1 justify-center"
               >
-                <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
-                <strong v-if="check_if_voting_period(vote_date) && !(if_voted)">投票を確定しますか？</strong>
-                <font size="-1" v-else-if="check_if_voting_period(vote_date) && (if_voted)"><strong>本日は既に投票済みです。</strong></font>
-                <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
+                <!-- <strong>投票を確定しますか？</strong> -->
+                <font size="-1"><strong>投票期間ではありません。</strong></font>
                 </v-card-title>
                 <v-card-actions>
                   <v-spacer></v-spacer>
@@ -94,7 +91,6 @@
 </template>
 
 <script>
-  import VueCookies from 'vue-cookies';
   export default {
     name: 'Modal',
     props: {
@@ -114,16 +110,8 @@
     },
     methods: {
       sendVote () {
-        console.log('to be continue...') // apiを実装後に実装する。
-        // 投票成功したら
-        VueCookies.set('if_voted', true);
-      },
-      check_if_voting_period (vote_date) {
-        if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) >= vote_date) 
-            && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
-          return true;
-        }
-      },
+        console.log('to be continue...')
+      }
     }
   }
 </script>

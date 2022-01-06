@@ -41,7 +41,7 @@
             color="blue-grey lighten-1"
             class="white--text"
           >
-            {{ item.desc }}
+            {{ item.presenter }}
           </v-btn>
           
         </v-col>
@@ -73,8 +73,8 @@
       this.items = [
          { 
           id: 1,
-          desc: '菅俣登子',
-          range: '「食品ロス」は茶碗一杯が原因！？',
+          presenter: '菅俣登子',
+          caption: '「食品ロス」は茶碗一杯が原因！？',
           title: '「食品ロス」は</br>茶碗一杯が原因！？',
           explanation: '「食品ロス」はお茶碗一杯が原因となって起こる問題です。</br></br>この問題に対する具体的な原因と対策について発表します！最後には登子(私)考案の画期的な対策方法も提案しています！ぜひご覧ください！',
           youtubeUrl: 'https://www.youtube.com/embed/U36ZiEvbV40',
@@ -83,8 +83,8 @@
         },
         { 
           id: 2, 
-          desc: '山川莉実花',
-          range: '”誰でも”使える○○の使い方！',
+          presenter: '山川莉実花',
+          caption: '”誰でも”使える○○の使い方！',
           title: '”誰でも”使える</br>○○の使い方！',
           explanation: '私がプレゼンさせていただくのは「誰でも使える〇〇の使い方」です！</br></br>現在、情報化社会の中で生きていますが今回は皆さんにスマホの使いすぎについての解決策というのをお伝えしたいと思います！',
           youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
@@ -93,8 +93,8 @@
         },
         { 
           id: 3, 
-          desc: '小貫朝心',
-          range: 'フェアトレードをもっと身近に',
+          presenter: '小貫朝心',
+          caption: 'フェアトレードをもっと身近に',
           title: 'フェアトレードを</br>もっと身近に',
           explanation: '身の回りに溢れている沢山の商品。皆さんは商品を生産している人々のことを考えたことはありますか？</br></br>また、世界で問題になっている貧困や児童労働の問題を知っていますか？</br></br>フェアトレードを通して一緒に解決しましょう。',
           youtubeUrl: 'https://www.youtube.com/embed/2KFqu7dujl8',
@@ -103,8 +103,8 @@
         },
         { 
           id: 4,  
-          desc: '水沼ゆきの',
-          range: '自分を変えたい！を原動力に',
+          presenter: '水沼ゆきの',
+          caption: '自分を変えたい！を原動力に',
           title: '自分を変えたい！</br>を原動力に</br>',
           explanation: '私は今回、｢自分を変えたい！を原動力に｣というテーマでプレゼンを発表させていただきます。</br></br>自分を変えたいと思っている人の後押しをしたいと思い、このプレゼンに挑戦してみました。',
           youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
@@ -113,8 +113,8 @@
         },
         { 
           id: 5, 
-          desc: '田井理蓮',
-          range: '誰一人取り残さなさいグローバル社会へ',
+          presenter: '田井理蓮',
+          caption: '誰一人取り残さなさいグローバル社会へ',
           title: '誰一人取り残さなさい</br>グローバル社会へ',
           explanation: '今や世界はグローバル社会の時代。そんな時代を生きる私たちのあるべき姿とはどのようなものでしょうか。</br></br>誰一人取り残されないグローバル社会を築くために、今回、あるプロジェクトを提案します！',
           youtubeUrl: 'https://www.youtube.com/embed/U2cSAVWNr8Q',
@@ -123,8 +123,8 @@
         },
         { 
           id: 6, 
-          desc: '佐藤彩乃',
-          range: '様々な問題で苦しむ単身家庭の架け橋に！！',
+          presenter: '佐藤彩乃',
+          caption: '様々な問題で苦しむ単身家庭の架け橋に！！',
           title: '様々な問題で苦しむ</br>単身家庭の架け橋に！',
           explanation: '今回私は皆さんに単身家庭の抱える問題について一つでも多く知っていただきたいと思います。</br></br>そして私が提案するどの年代層の方でも簡単に寄付支援ができる仕組みを通して、少しでも多くの貧困で苦しんでいる単身家庭の方々の救いの手になり、私たちが相対的貧困率を減らす架け橋になっていきましょう。',
           youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
@@ -133,8 +133,8 @@
         },
         { 
           id: 7, 
-          desc: '川見菜緒',
-          range: '会話が100倍楽しくなる魔法　聴く力',
+          presenter: '川見菜緒',
+          caption: '会話が100倍楽しくなる魔法　聴く力',
           title: '会話が100倍楽しくなる</br>魔法 聴く力',
           explanation: '友人との会話をきっかけにコミュニケーションの取り方を意識するようになり、大きな気付きがありました。</br></br>心を開いている人とこそ、互いのやりとりが成立しているか意識するきっかけとなればと思います。',
           youtubeUrl: 'https://www.youtube.com/embed/HgZEF5isWAU',
