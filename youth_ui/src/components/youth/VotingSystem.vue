@@ -14,7 +14,7 @@
         <div class = "hidden-sm-and-down">
           <img
             alt = "プレゼン シナジー2021 youth"
-            src="@/assets/voting_system_youth/voting_period_youth.png" 
+            src="@/assets/voting_system_youth/vote1_youth_pc.png" 
             width="100%"
           > 
         </div>
@@ -32,7 +32,7 @@
         <div class = "hidden-sm-and-up">
           <img
             alt = "プレゼン シナジー2021 youth"
-            src="@/assets/voting_system_youth/voting_period_sm_youth.png" 
+            src="@/assets/voting_system_youth/vote1_youth_sp.png" 
             width="100%"
           > 
         </div>
@@ -54,7 +54,7 @@
         <div class ="hidden-sm-and-down">
           <img 
             alt = "プレゼン シナジー2021 youth"
-            src="@/assets/voting_system_youth/voting_youth.png" 
+            src="@/assets/voting_system_youth/vote2_youth_pc.png" 
             width="100%"
           > 
         </div>
@@ -73,7 +73,7 @@
         <div class = "hidden-sm-and-up">
           <img
             alt = "プレゼン シナジー2021 youth"
-            src="@/assets/voting_system_youth/voting_sm_youth.png" 
+            src="@/assets/voting_system_youth/vote2_youth_sp.png" 
             width="100%"
           > 
         </div>
