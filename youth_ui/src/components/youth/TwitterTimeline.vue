@@ -1,10 +1,10 @@
 <template>
  <div class = "twitter-timeline">
-   <h1 class="head-border my-15">
+   <h1 class="head-border mt-15 mb-15">
         SNSにて情報発信中
     </h1>
-  <v-container>
-        <v-row>
+  <v-container  class = "timeline_size pa-5">
+        <v-row >
           <v-col
             v-for="user_id in user_ids"
             :key='user_id'
@@ -15,7 +15,7 @@
               </v-card-title>
               <v-flex xs12>
                 <div>
-                  <Timeline :id="user_id" sourceType="profile" :options="{ 'height': '700px'}"/>
+                  <Timeline :id="user_id" sourceType="profile" :options="{ 'height': '500px'}"/>
                 </div>
               </v-flex>
             </v-card>
@@ -43,5 +43,9 @@ export default {
 <style scoped>
 .v-card{
   background-image: linear-gradient(-90deg, #ffffff, hsl(0, 0%, 100%));
+}
+.timeline_size{
+  text-align: center;
+  max-width: 600px;
 }
 </style>
