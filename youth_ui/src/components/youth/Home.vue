@@ -2,6 +2,7 @@
   <div class="home">
     <div class="home-container">
       <div class="top "><top></top></div>
+      <div class="voting-system"><voting-system></voting-system></div>
       <div class="vote"><vote></vote></div>
       <div class="organizer"><organizer></organizer></div>
       <div class="twitter-timeline"><twitter-timeline /></div>
@@ -14,6 +15,7 @@ import Top from "./Top.vue"
 import Vote from './Vote.vue'
 import Organizer from './Organizer.vue'
 import TwitterTimeline from './TwitterTimeline.vue'
+import VotingSystem from './VotingSystem.vue'
 
 
 export default {
@@ -22,7 +24,8 @@ export default {
     Top,
     Vote,
     Organizer,
-    TwitterTimeline
+    TwitterTimeline,
+    VotingSystem 
     
   },
   props: {
