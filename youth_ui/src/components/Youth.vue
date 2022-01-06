@@ -10,7 +10,7 @@
         <v-card-text
          class="white--text text-center"
         >
-          <p>S!NERGY 2021 特設サイト</p>
+          <strong >S!NERGY（シナジー)</strong> 
           <v-divider></v-divider>
         </v-card-text>      
         <home class="mb-15"/>
