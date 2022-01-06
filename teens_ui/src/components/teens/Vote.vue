@@ -151,9 +151,9 @@
     },
     methods: {
       openModal (item) {
-        if (!(VueCookies.isKey('vote_date'))) {
-          VueCookies.set('vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
-          VueCookies.set('if_voted', false);
+        if (!(VueCookies.isKey('teens_vote_date'))) {
+          VueCookies.set('teens_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
+          VueCookies.set('teens_if_voted', false);
         }
         this.selectedItem = item;
         console.log(item);

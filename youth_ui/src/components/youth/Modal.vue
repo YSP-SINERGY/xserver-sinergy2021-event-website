@@ -104,8 +104,6 @@
     data () {
       return {
         confirmDialog: false,
-        // vote_date: VueCookies.get('vote_date'),
-        // if_voted: VueCookies.get('if_voted'),
       }
     },
     watch: {
@@ -125,7 +123,7 @@
           );
           alert("投票完了しました。")
           // 投票成功したら
-          VueCookies.set('if_voted', true);
+          VueCookies.set('youth_if_voted', true);
         } catch (error) {
           this.error = error.response;
           console.log(this.error);
@@ -138,14 +136,14 @@
         //     && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
         //   return true;
         // }
-        let vote_date = VueCookies.get('vote_date');
+        let vote_date = VueCookies.get('youth_vote_date');
         if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
           && (vote_date < new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
           return true;
         }
       },
       check_if_voted() {
-        let if_voted = VueCookies.get('if_voted')
+        let if_voted = VueCookies.get('youth_if_voted')
         if (if_voted === 'true') {
           return true
         } else if (if_voted === 'false') {
