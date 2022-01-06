@@ -95,6 +95,7 @@
 
 <script>
   import VueCookies from 'vue-cookies';
+  import axios from 'axios';
   export default {
     name: 'Modal',
     props: {
