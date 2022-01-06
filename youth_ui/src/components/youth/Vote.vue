@@ -129,7 +129,7 @@
           desc: '齋藤柱導',
           range: 'なぜアフリカへの支援活動を辞めてオシャレをするのか',
           explanation: '自分のことが嫌いだった私を変えてくれたのはアフリカでした。</br></br>しかし、現地人からのたった一言がきっかけで、ある悩みが生まれました。</br></br>それを解決し、愛と誇りに溢れた未来のために、私はオシャレをしています。',
-          youtubeUrl: 'ttps://www.youtube.com/embed/mefEJadgUXg',
+          youtubeUrl: 'https://www.youtube.com/embed/mefEJadgUXg',
           imageUrl: require("@/assets/youth/y_saitou.jpg"),
           isShow: false
         },
