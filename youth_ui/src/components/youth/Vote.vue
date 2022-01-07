@@ -212,9 +212,9 @@
           VueCookies.set('youth_if_voted', false);
           VueCookies.set('youth_user_agent', navigator.userAgent);
         }
-        if (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }) >= new Date("2022-01-10T11:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) {
-          VueCookies.set('youth_if_voted', true);
-        }
+        // if (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }) >= new Date("2022-01-10T11:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) {
+        //   VueCookies.set('youth_if_voted', true);
+        // }
         axios.get('https://api.ipify.org?format=json')
           .then(res => {
             VueCookies.set('youth_ip', res.data.ip);
