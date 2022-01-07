@@ -61,6 +61,7 @@
 </template>
 
 <script>
+  import axios from 'axios';
   import VueCookies from 'vue-cookies';
   import Modal from './Modal.vue'
   import applicationForm from './ApplicationForm.vue'
@@ -171,6 +172,16 @@
           imageUrl: require("@/assets/youth/y_honda.jpg"),
           isShow: false
         },
+        // { // 辞退
+        //   id: 10, 
+        //   presenter: '園部達也',
+        //   caption: 'YSP活動を通して感じたことや学んだこと',
+        //   title: 'タイトル未定',
+        //   explanation: '',
+        //   youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
+        //   imageUrl: require("@/assets/youth/y_sonobe.jpg"),
+        //   isShow: false
+        // },
         // { 
         //   id: 11, //連絡なし、追加可能性あり
         //   presenter: '木村晃介',
@@ -196,10 +207,19 @@
     },
     methods: {
       openModal (item) {
-        if (!(VueCookies.isKey('youth_vote_date'))) {
-          VueCookies.set('youth_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
+        // console.log('minutes2', new Date(VueCookies.get('youth_vote_date')).getMinutes())
+        if (!(VueCookies.isKey('youth_vote_date')) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 9)) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 10)) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 9) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 10))) { // 投票日に関するクッキーが存在しない場合
           VueCookies.set('youth_if_voted', false);
+          VueCookies.set('youth_user_agent', navigator.userAgent);
         }
+        if (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }) >= new Date("2022-01-10T11:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) {
+          VueCookies.set('youth_if_voted', true);
+        }
+        axios.get('https://api.ipify.org?format=json')
+          .then(res => {
+            VueCookies.set('youth_ip', res.data.ip);
+            VueCookies.get('youth_ip')
+        });
         this.selectedItem = item;
         console.log(item);
         

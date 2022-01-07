@@ -21,6 +21,12 @@ export default {
     CrowdFunding,
     NavigationMenu
   },
+//   methods: {
+//     if_necessary_to_expire_cookie() {
+//       if (!(VueCookies.isKey('youth_vote_date') || (new Date(VueCookies.get('youth_vote_date').getMinutes() + 1 == 21) || (new Date(VueCookies.get('youth_vote_date').getMinutes() + 1 == 22) || (new Date(VueCookies.get('youth_vote_date').getMinutes() + 1 == 23))) {
+//       }
+//     },
+//   },
   data: () => ({
   }),
   mounted() { // SEO強化のため。
@@ -32,13 +38,19 @@ export default {
     document.querySelector("meta[property='og:description']").setAttribute('content', description)
   },
   created() {
-    if (!(VueCookies.isKey('youth_vote_date'))) { // 投票日に関するクッキーが存在しない場合
+    // console.log('date', new Date(VueCookies.get('youth_vote_date')).getDate())
+    if (!(VueCookies.isKey('youth_vote_date')) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 9)) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 10)) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 9) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 10))) { // 投票日に関するクッキーが存在しない場合
       VueCookies.set('youth_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
       VueCookies.set('youth_if_voted', false);
+      VueCookies.set('youth_user_agent', navigator.userAgent);
+    }
+    if (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }) >= new Date("2022-01-10T11:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) {
+      VueCookies.set('youth_if_voted', true);
     }
     axios.get('https://api.ipify.org?format=json')
       .then(res => {
-        VueCookies.set('ip', res.data.ip);
+        VueCookies.set('youth_ip', res.data.ip);
+        console.log(VueCookies.get('youth_ip'))
     });
   },
 };
