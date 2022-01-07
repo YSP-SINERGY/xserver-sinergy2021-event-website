@@ -71,13 +71,13 @@
                   <!-- <div class="application-form"><applicationForm></applicationForm></div>   -->
 
                   <!-- <v-btn v-if="check_if_voting_period() && !check_if_voted()" -->
-                  <v-btn 
+                  <!-- <v-btn 
                     color="orange darken-4"
                     text
                     @click="sendVote"
                   >
                     確定する
-                  </v-btn>        
+                  </v-btn>         -->
                 </v-card-actions>
               </v-card>
           </v-dialog>
@@ -154,22 +154,16 @@
       },
       check_if_voting_period () {
         let vote_date = VueCookies.get('youth_vote_date');
-        // console.log('type', new Date(vote_date).getMinutes())
-        if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
-            && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
+        if ((new Date("2022-01-07T15:00:00Z") <= new Date(vote_date))
+        && (new Date(vote_date) <= new Date("2022-01-10T11:00:00Z"))) { // 日本時間で投票期間であるかのチェック
           return true;
         } else {
           return false;
         }
-        // if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
-        //   && (vote_date < new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
-        //   return true;
-        // }
       },
       check_if_voted() {
         let if_voted = VueCookies.get('youth_if_voted')
-        console.log(if_voted)
-        console.log(VueCookies.get('youth_ip'))
+        console.log('if_voted', if_voted)
         if (if_voted === 'true') {
           return true
         } else if (if_voted === 'false') {

@@ -207,8 +207,11 @@
     },
     methods: {
       openModal (item) {
-        // console.log('minutes2', new Date(VueCookies.get('youth_vote_date')).getMinutes())
-        if (!(VueCookies.isKey('youth_vote_date')) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 9)) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 10)) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 9) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 10))) { // 投票日に関するクッキーが存在しない場合
+        // クッキーが存在しないか、クッキーが生成されてから一日あるいは二日経過している場合。
+        if (!(VueCookies.isKey('youth_vote_date'))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 9))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 10))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 9) && (new Date().getDate() === 10))) {
           VueCookies.set('youth_if_voted', false);
           VueCookies.set('youth_user_agent', navigator.userAgent);
         }
