@@ -123,7 +123,7 @@
         { 
           id: 5, 
           presenter: '小野村華楠',
-          caption: '「NOMORE Child Marriage </br>-ニジェール共和国における</br>児童婚防止キャンペーン」',
+          caption: '「NOMORE Child Marriage </br>-ニジェール共和国における児童婚防止キャンペーン」',
           title: 'ニジェールの児童婚</br>防止キャンペーン',
           explanation: '私は12歳で結婚した。</br>皆さんは児童婚について知っていますか？</br>児童婚は、10代の子供たちが強制的に結婚をさせられることを意味します。</br></br>特にアフリカのニジェールでは、深刻な問題となっています。そこで、今回はこの問題を解決するためのキャンペーンを立ち上げました！どうぞ応援よろしくお願い致します！',
           youtubeUrl: 'https://www.youtube.com/embed/GFpBk7bWORk',
