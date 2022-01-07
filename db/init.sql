@@ -75,7 +75,11 @@ INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '本田�
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '菅俣登子');
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '山川莉実花');
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '小貫朝心');
+<<<<<<< HEAD
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '水沼千乃');
+=======
+INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '水沼ゆきの');
+>>>>>>> クッキー管理を完成し、IPアドレスと端末情報をサーバーで管理する仕組みを作りました。 (#27)
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '田井理蓮');
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '佐藤彩乃');
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '川見菜緒');
