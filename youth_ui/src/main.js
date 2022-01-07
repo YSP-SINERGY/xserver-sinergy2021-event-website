@@ -24,7 +24,11 @@ Vue.use(VueScrollTo)  // add
 // VueCookiesをプロジェクト全体で利用できるようにする
 Vue.use(VueCookies)
 // クッキーの満了日は１日に設定。（グローバルセッティング）
-Vue.$cookies.config('2min') //クッキーは1分毎に更新される。
+// Vue.$cookies.config('20s') //クッキーは1分毎に更新される。
+// Vue.$cookies.config(new Date("2022-01-07T13:01:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) // 投票開始前にクッキーをリセット(日本標準時刻基準)
+// Vue.$cookies.config(new Date("2022-01-07T13:01:20Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) // 1日目クッキー満了(日本標準時刻基準)
+// Vue.$cookies.config(new Date("2022-01-07T13:01:40Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) // 2日目クッキー満了(日本標準時刻基準)
+// Vue.$cookies.config(new Date("2022-01-07T13:02:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) // 3日目クッキー満了(日本標準時刻基準)
 // Vue.$cookies.config(new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) // 投票開始前にクッキーをリセット(日本標準時刻基準)
 // Vue.$cookies.config(new Date("2022-01-08T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) // 1日目クッキー満了(日本標準時刻基準)
 // Vue.$cookies.config(new Date("2022-01-09T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) // 2日目クッキー満了(日本標準時刻基準)
