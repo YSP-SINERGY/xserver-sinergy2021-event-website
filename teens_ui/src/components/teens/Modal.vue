@@ -129,7 +129,11 @@
     methods: {
       async sendVote () {
         // make a PATCH request to teens vote endpoint
+<<<<<<< HEAD
         const endpoint = `https://was71zjlhi.execute-api.ap-northeast-1.amazonaws.com/production/api/v1/teens_votes/`; // 本番ではproductionに切り替える
+=======
+        const endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/`; // 本番ではproductionに切り替える
+>>>>>>> クッキー管理を完成し、IPアドレスと端末情報をサーバーで管理する仕組みを作りました。 (#27)
         try {
           let response = await axios.patch(
             endpoint,

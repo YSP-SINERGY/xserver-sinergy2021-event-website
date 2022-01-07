@@ -38,6 +38,7 @@ export default {
     document.querySelector("meta[property='og:description']").setAttribute('content', description)
   },
   created() {
+<<<<<<< HEAD
     // クッキーが存在しないか、クッキーが生成されてから一日あるいは二日経過している場合。
     if (!(VueCookies.isKey('youth_vote_date'))
     || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 9)) 
@@ -46,6 +47,16 @@ export default {
       VueCookies.set('youth_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
       VueCookies.set('youth_if_voted', false);
       VueCookies.set('youth_user_agent', navigator.userAgent);
+=======
+    // console.log('date', new Date(VueCookies.get('youth_vote_date')).getDate())
+    if (!(VueCookies.isKey('youth_vote_date')) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 9)) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 10)) || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 9) && (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }).getDate() === 10))) { // 投票日に関するクッキーが存在しない場合
+      VueCookies.set('youth_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
+      VueCookies.set('youth_if_voted', false);
+      VueCookies.set('youth_user_agent', navigator.userAgent);
+    }
+    if (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }) >= new Date("2022-01-10T11:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) {
+      VueCookies.set('youth_if_voted', true);
+>>>>>>> クッキー管理を完成し、IPアドレスと端末情報をサーバーで管理する仕組みを作りました。 (#27)
     }
     // if (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }) >= new Date("2022-01-10T11:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) {
     //   VueCookies.set('youth_if_voted', true);

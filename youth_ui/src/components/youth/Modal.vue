@@ -164,7 +164,6 @@
       },
       check_if_voted() {
         let if_voted = VueCookies.get('youth_if_voted')
-        console.log('if_voted', if_voted)
         if (if_voted === 'true') {
           return true
         } else if (if_voted === 'false') {
