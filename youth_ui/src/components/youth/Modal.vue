@@ -158,33 +158,40 @@
       async check_if_valid_user_agent_with_ip() {
         // ここでDBからユーザーのIPやユーザーエージェントの情報を取得し、有効なユーザーか確認する。
         const aws_endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/youth_votes/`;
-        const ip_endpoint = 'https://api.ipify.org?format=json';
+        // const ip_endpoint = 'https://api.ipify.org?format=json';
         let flag = false;
         try {
           let aws_response = await axios.get( aws_endpoint );
-          let ip_response = await axios.get( ip_endpoint );
-          let current_ip = ip_response.data.ip
+          // let ip_response = await axios.get( ip_endpoint );
+          // let current_ip = ip_response.data.ip
+          let current_user_agent = navigator.userAgent;
           let user_terminals_arr = aws_response.data.user_terminals
           for (let i=0; i<user_terminals_arr.length; i++) {
-            if (current_ip === user_terminals_arr[i].ip_address) {
+            // if (current_ip === user_terminals_arr[i].ip_address) {
+            //   flag = true;
+            //   break;
+            // }
+            if (current_user_agent === user_terminals_arr[i].user_agent) {
               flag = true;
               break;
             }
           }
           if (flag) {
-            VueCookies.set('youth_if_valid_ip', false);
+            // VueCookies.set('youth_if_valid_ip', false);
+            VueCookies.set('youth_if_valid_user_agent', false);
           } else {
-            VueCookies.set('youth_if_valid_ip', true);
+            // VueCookies.set('youth_if_valid_ip', true);
+            VueCookies.set('youth_if_valid_user_agent', true);
           }
         } catch (error) {
           console.log(error)
         }
       },
       check_if_valid_user_agent() {
-        let if_valid_ip = VueCookies.get('youth_if_valid_ip')
-        if (if_valid_ip === 'true') {
+        let if_valid_user = VueCookies.get('youth_if_valid_user_agent')
+        if (if_valid_user === 'true') {
           return true
-        } else if (if_valid_ip === 'false') {
+        } else if (if_valid_user === 'false') {
           return false
         }
       },
