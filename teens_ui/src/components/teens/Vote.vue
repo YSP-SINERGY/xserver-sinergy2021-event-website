@@ -49,23 +49,29 @@
       <modal
         :dialog.sync="isModal"
         :item="selectedItem"
+        @open-application-form-modal="openApplicationFormModal"
+      />
+      <applicationForm
+        :dialog.sync="isApplicationFormModal"
       />
     </div>  
   </v-container>
 </template>
 
 <script>
-  import VueCookies from 'vue-cookies';
   import Modal from './Modal.vue'
+  import applicationForm from './ApplicationForm.vue'
 
   export default {
     components: {
-      Modal
+      Modal,
+      applicationForm
     },
     data () {
       return {
         showContent: false,
         isModal: false,
+        isApplicationFormModal: false,
         selectedItem: {},
         items: []
       }
@@ -151,10 +157,6 @@
     },
     methods: {
       openModal (item) {
-        if (!(VueCookies.isKey('teens_vote_date'))) {
-          VueCookies.set('teens_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
-          VueCookies.set('teens_if_voted', false);
-        }
         this.selectedItem = item;
         console.log(item);
         
@@ -166,6 +168,10 @@
       },
       shuffleItems () {
         this.items = this.items.sort(() => 0.5 - Math.random());
+      },
+      openApplicationFormModal () {
+        console.log('hentai')
+        this.isApplicationFormModal = true  
       }
     },
     computed: {
