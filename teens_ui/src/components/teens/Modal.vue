@@ -52,13 +52,13 @@
               class="text-subtitle-1 justify-center"
               >
                 <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
-                <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font>
-                <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font>
+                <font size="-1" v-if="check_if_voting_period() && check_if_valid_user_agent() && !check_if_voted()"><strong>投票を確定しますか？</strong></font>
+                <font size="-1" v-else-if="check_if_voting_period() && !check_if_valid_user_agent()"><strong>本日は既に投票済みです。</strong></font>
                 <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
                 </v-card-title>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn v-if="check_if_voting_period() && !check_if_voted()"
+                  <v-btn v-if="check_if_voting_period() && !check_if_voted() && check_if_valid_user_agent()"
                     color="warning"
                     text
                     @click="sendVote"
@@ -114,16 +114,22 @@
     },
     methods: {
       async sendVote () {
-        // make a PATCH request to youth vote endpoint
-        const endpoint = "https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/"; // 本番ではproductionに切り替える。
+        // make a PATCH request to teens vote endpoint
+        const endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/`; // 本番ではproductionに切り替える
         try {
-          await axios.patch(
+          let response = await axios.patch(
             endpoint,
-            { id: this.item.id }
+            {
+              id: this.item.id,
+              ip: VueCookies.get('teens_ip'),
+              user_agent: VueCookies.get('teens_user_agent')
+            },
           );
-          alert("投票完了しました。");
+          console.log('response', response);
+          alert("投票完了しました。")
           // 投票成功したら
           VueCookies.set('teens_if_voted', true);
+          this.check_if_valid_user_agent_with_ip();
         } catch (error) {
           this.error = error.response;
           console.log(this.error);
@@ -133,22 +139,60 @@
       },
       check_if_voting_period () {
         let vote_date = VueCookies.get('teens_vote_date');
-        if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) >= vote_date) 
-            && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
-        // if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
-        //   && (vote_date < new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
+        // if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) >= vote_date) 
+        //     && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
+        //   return true;
+        // }
+        if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
+          && (vote_date < new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
           return true;
         }
       },
       check_if_voted() {
         let if_voted = VueCookies.get('teens_if_voted')
         if (if_voted === 'true') {
-          return true
+          return true;
         } else if (if_voted === 'false') {
+          return false;
+        }
+      },
+      async check_if_valid_user_agent_with_ip() {
+        // ここでDBからユーザーのIPやユーザーエージェントの情報を取得し、有効なユーザーか確認する。
+        const aws_endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/`;
+        const ip_endpoint = 'https://api.ipify.org?format=json';
+        let flag = false;
+        try {
+          let aws_response = await axios.get( aws_endpoint );
+          let ip_response = await axios.get( ip_endpoint );
+          let current_ip = ip_response.data.ip
+          let user_terminals_arr = aws_response.data.user_terminals
+          for (let i=0; i<user_terminals_arr.length; i++) {
+            if (current_ip === user_terminals_arr[i].ip_address) {
+              flag = true;
+              break;
+            }
+          }
+          if (flag) {
+            VueCookies.set('teens_if_valid_ip', false);
+          } else {
+            VueCookies.set('teens_if_valid_ip', true);
+          }
+        } catch (error) {
+          console.log(error)
+        }
+      },
+      check_if_valid_user_agent() {
+        let if_valid_ip = VueCookies.get('teens_if_valid_ip')
+        if (if_valid_ip === 'true') {
+          return true
+        } else if (if_valid_ip === 'false') {
           return false
         }
       },
-    }
+    },
+    created() {
+      this.check_if_valid_user_agent_with_ip();
+    },
   }
 </script>
 

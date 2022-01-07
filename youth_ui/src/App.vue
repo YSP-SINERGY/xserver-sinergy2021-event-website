@@ -39,7 +39,7 @@ export default {
     }
     axios.get('https://api.ipify.org?format=json')
       .then(res => {
-        VueCookies.set('ip', res.data.ip);
+        VueCookies.set('youth_ip', res.data.ip);
     });
   },
 };

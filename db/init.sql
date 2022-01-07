@@ -15,7 +15,16 @@ CREATE TABLE IF NOT EXISTS `teens_vote` (
     `updated` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP()
 );
 
-CREATE TABLE IF NOT EXISTS `connection_info` (
+CREATE TABLE IF NOT EXISTS `youth_connection` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `presenter_id` INT NOT NULL DEFAULT -1,
+    `ip_address` TEXT NOT NULL DEFAULT '',
+    `user_agent` TEXT NOT NULL DEFAULT '',
+    `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    `updated` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP()
+);
+
+CREATE TABLE IF NOT EXISTS `teens_connection` (
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `presenter_id` INT NOT NULL DEFAULT -1,
     `ip_address` TEXT NOT NULL DEFAULT '',
@@ -43,7 +52,6 @@ INSERT INTO `youth_vote` (`id`) VALUES (DEFAULT);
 INSERT INTO `youth_vote` (`id`) VALUES (DEFAULT);
 INSERT INTO `youth_vote` (`id`) VALUES (DEFAULT);
 INSERT INTO `youth_vote` (`id`) VALUES (DEFAULT);
-INSERT INTO `youth_vote` (`id`) VALUES (DEFAULT);
 
 INSERT INTO `teens_vote` (`id`) VALUES (DEFAULT);
 INSERT INTO `teens_vote` (`id`) VALUES (DEFAULT);
@@ -60,7 +68,6 @@ INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '舟橋�
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '東郷泰暉');
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '小野村華楠');
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '五十嵐大修');
-INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '園部達也');
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '齋藤柱導');
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '熊谷有未');
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '本田裕明');

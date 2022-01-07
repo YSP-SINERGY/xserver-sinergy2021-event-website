@@ -137,16 +137,6 @@
         },
         { 
           id: 7, 
-          presenter: '園部達也',
-          caption: 'YSP活動を通して感じたことや学んだこと',
-          title: 'タイトル未定',
-          explanation: '',
-          youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
-          imageUrl: require("@/assets/youth/y_sonobe.jpg"),
-          isShow: false
-        },
-        { 
-          id: 8, 
           presenter: '齋藤柱導',
           caption: 'なぜアフリカへの支援活動を辞めてオシャレをするのか',
           title: '支援を辞めて</br>オシャレする理由',
@@ -156,7 +146,7 @@
           isShow: false
         },
         { 
-          id: 9, 
+          id: 8, 
           presenter: '熊谷有未', // 船橋光治から変更
           caption: '「共生・共栄・共義」ここに未来が有る',
           title: '「共生・共栄・共義」</br>ここに未来が有る',
@@ -166,7 +156,7 @@
           isShow: false
         },
          { 
-          id: 10, 
+          id: 9, 
           presenter: '本田裕明',
           caption: '長崎市の人口減少ってやばくね？</br>【未来世代まで幸せになれる長崎を目指して】',
           title: '未来世代まで幸せになれる</br>長崎を目指して',
@@ -175,6 +165,16 @@
           imageUrl: require("@/assets/youth/y_honda.jpg"),
           isShow: false
         },
+        // { // 辞退
+        //   id: 10, 
+        //   presenter: '園部達也',
+        //   caption: 'YSP活動を通して感じたことや学んだこと',
+        //   title: 'タイトル未定',
+        //   explanation: '',
+        //   youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
+        //   imageUrl: require("@/assets/youth/y_sonobe.jpg"),
+        //   isShow: false
+        // },
         // { 
         //   id: 11, //連絡なし、追加可能性あり
         //   presenter: '木村晃介',
@@ -207,7 +207,7 @@
         }
         axios.get('https://api.ipify.org?format=json')
           .then(res => {
-            VueCookies.set('ip', res.data.ip);
+            VueCookies.set('youth_ip', res.data.ip);
         });
         this.selectedItem = item;
         console.log(item);
