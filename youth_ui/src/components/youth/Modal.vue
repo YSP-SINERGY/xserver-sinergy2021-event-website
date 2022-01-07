@@ -127,7 +127,7 @@
     methods: {
       async sendVote () {
         // make a PATCH request to youth vote endpoint
-        const endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/youth_votes/`; // 本番ではproductionに切り替える
+        const endpoint = `https://was71zjlhi.execute-api.ap-northeast-1.amazonaws.com/production/api/v1/youth_votes/`; // 本番ではproductionに切り替える
         try {
           let response = await axios.patch(
             endpoint,
