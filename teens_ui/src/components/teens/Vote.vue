@@ -161,16 +161,13 @@
       openModal (item) {
         // クッキーが存在しないか、クッキーが生成されてから一日あるいは二日経過している場合。
         if (!(VueCookies.isKey('teens_vote_date'))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 8) && (new Date(new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })).getDate() === 9))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 8) && (new Date(new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })).getDate() === 10))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 9) && (new Date(new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })).getDate() === 10))) {
+        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 8) && (new Date().getDate() === 9))
+        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 8) && (new Date().getDate() === 10))
+        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 9) && (new Date().getDate() === 10))) {
           VueCookies.set('teens_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
           VueCookies.set('teens_if_voted', false);
           VueCookies.set('teens_user_agent', navigator.userAgent);
         }
-        // if (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }) >= new Date("2022-01-10T11:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) {
-        //   VueCookies.set('teens_if_voted', true);
-        // }
         axios.get('https://api.ipify.org?format=json')
           .then(res => {
             VueCookies.set('teens_ip', res.data.ip);
