@@ -4,7 +4,6 @@
     persistent
     max-width="695"
     max-height="650"
-    color= "white"
   >
     <v-card>            
       <div class="text-center">  
@@ -25,10 +24,11 @@
             <h5 class="text-center px-5 mt-6 mb-6 text-h6" v-html="item.caption"></h5>
             <p class="text-left px-5 pb-6 text-caption" v-html="item.explanation"></p>
           </div>
+    
           <v-dialog
             v-model="confirmDialog"
             persistent
-            max-width="290"
+            width="300"
           >
             <template v-slot:activator="{ on, attrs }">
               <v-btn
@@ -40,40 +40,41 @@
               >投票
               </v-btn>
             </template>
-            <v-alert
-            border="left"
-            colored-border
-            color="blue-grey darken-1"
-            type="error"
-            elevation="2"    
-            width="100%"
-            >
+
+            <!-- ここから変更 -->
+            <v-card>
               <v-card-title 
-              class="text-subtitle-1 justify-center"
+              class="justify-center text-h6 "
               >
                 <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
-                <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font>
-                <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font>
-                <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
-                </v-card-title>
+                <font size="-1" ><strong>投票を確定しますか？</strong></font>
+                <!-- <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font> -->
+                <!-- <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font> -->
+                <!-- <font size="-1" v-else><strong>投票期間ではありません。</strong></font> -->
+              </v-card-title>
+
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn v-if="check_if_voting_period() && !check_if_voted()"
-                    color="warning"
-                    text
-                    @click="sendVote"
-                  >
-                    確定する
-                  </v-btn>
                   <v-btn
                     color="blue-grey darken-1"
                     text
                     @click="$emit('update:dialog', false)"
                   >
-                    <font size="-1"><strong>閉じる</strong></font>
-                  </v-btn>
+                    <!-- <font size="-1"><strong>閉じる</strong></font> -->
+                    閉じる
+                  </v-btn>  
+                  <!-- <div class="application-form"><applicationForm></applicationForm></div>   -->
+
+                  <!-- <v-btn v-if="check_if_voting_period() && !check_if_voted()" -->
+                  <v-btn 
+                    color="orange darken-4"
+                    text
+                    @click="sendVote"
+                  >
+                    確定する
+                  </v-btn>        
                 </v-card-actions>
-            </v-alert>
+              </v-card>
           </v-dialog>
         </slot>
       </div>
@@ -92,14 +93,20 @@
   </v-dialog>
 </template>
 
+
 <script>
+  // import ApplicationForm from './ApplicationForm.vue'
   import VueCookies from 'vue-cookies';
   import axios from 'axios';
   export default {
     name: 'Modal',
+  //   components: {
+  //   ApplicationForm,
+    
+  // },
     props: {
       item: { type: Object, default: () => ({}) },
-      dialog: {type: Boolean, required: true }
+      dialog: {type: Boolean, required: true },
     },
     data () {
       return {
@@ -115,33 +122,38 @@
     methods: {
       async sendVote () {
         // make a PATCH request to youth vote endpoint
-        const endpoint = "https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/"; // 本番ではproductionに切り替える。
+        const endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/youth_votes/`; // 本番ではproductionに切り替える
         try {
           await axios.patch(
             endpoint,
             { id: this.item.id }
           );
-          alert("投票完了しました。");
+          alert("投票完了しました。")
+          this.$emit('open-application-form-modal')
+          
           // 投票成功したら
-          VueCookies.set('teens_if_voted', true);
+          VueCookies.set('youth_if_voted', true);
         } catch (error) {
           this.error = error.response;
           console.log(this.error);
           alert("投票ができませんでした。");
+          // this.$emit('open-application-form-modal')
         }
         this.$emit('update:dialog', false);
       },
       check_if_voting_period () {
-        let vote_date = VueCookies.get('teens_vote_date');
+        let vote_date = VueCookies.get('youth_vote_date');
         if ((new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) >= vote_date) 
             && (vote_date < new Date("2022-01-10T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
-        // if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
-        //   && (vote_date < new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
           return true;
         }
+        // if ((new Date("2022-01-05T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }) <= vote_date) 
+        //   && (vote_date < new Date("2022-01-07T15:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' }))) { // 日本時間で投票期間であるかのチェック
+        //   return true;
+        // }
       },
       check_if_voted() {
-        let if_voted = VueCookies.get('teens_if_voted')
+        let if_voted = VueCookies.get('youth_if_voted')
         if (if_voted === 'true') {
           return true
         } else if (if_voted === 'false') {
@@ -154,12 +166,8 @@
 
 
 <style scoped>
-.text-center{
-  background-color: rgb(246, 248, 248);
-}
-.text-right{
-  background-color: rgb(246, 248, 248);
-}
+
+
 .btn-rounded {
   border-radius: 20px;
 }
