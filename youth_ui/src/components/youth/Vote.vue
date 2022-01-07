@@ -80,7 +80,7 @@
           caption: 'お手伝いします！</br>私たちができる地域デザイン',
           title: 'お手伝いします！</br>私たちができる地域デザイン',
           explanation: '私たちは宮城県を中心に活動するデザインプロジェクトチームです。普段は地域貢献のために、お店や商品撮影、イベントやお笑いライブなど様々な分野の撮影を行なっています。</br></br>ぜひNONOSTYLEをご覧ください！',
-          youtubeUrl: 'https://www.youtube.com/embed/Luv6YusOsls', //動画未取得>元々のurlに問題あり
+          youtubeUrl: 'https://www.youtube.com/embed/Luv6YusOsls', 
           imageUrl: require("@/assets/youth/y_otomo.jpg"),
           isShow: false
         },
@@ -120,7 +120,7 @@
           caption: '「NOMORE Child Marriage </br>-ニジェール共和国における</br>児童婚防止キャンペーン」',
           title: 'ニジェールの児童婚</br>防止キャンペーン',
           explanation: '私は12歳で結婚した。</br>皆さんは児童婚について知っていますか？</br>児童婚は、10代の子供たちが強制的に結婚をさせられることを意味します。</br></br>特にアフリカのニジェールでは、深刻な問題となっています。そこで、今回はこの問題を解決するためのキャンペーンを立ち上げました！どうぞ応援よろしくお願い致します！',
-          youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
+          youtubeUrl: 'https://www.youtube.com/embed/GFpBk7bWORk',
           imageUrl: require("@/assets/youth/y_onomura.jpg"),
           isShow: false
         },
@@ -136,16 +136,6 @@
         },
         { 
           id: 7, 
-          presenter: '園部達也',
-          caption: 'YSP活動を通して感じたことや学んだこと',
-          title: 'タイトル未定',
-          explanation: '',
-          youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
-          imageUrl: require("@/assets/youth/y_sonobe.jpg"),
-          isShow: false
-        },
-        { 
-          id: 8, 
           presenter: '齋藤柱導',
           caption: 'なぜアフリカへの支援活動を辞めてオシャレをするのか',
           title: '支援を辞めて</br>オシャレする理由',
@@ -155,7 +145,7 @@
           isShow: false
         },
         { 
-          id: 9, 
+          id: 8, 
           presenter: '熊谷有未', // 船橋光治から変更
           caption: '「共生・共栄・共義」ここに未来が有る',
           title: '「共生・共栄・共義」</br>ここに未来が有る',
@@ -165,7 +155,7 @@
           isShow: false
         },
          { 
-          id: 10, 
+          id: 9, 
           presenter: '本田裕明',
           caption: '長崎市の人口減少ってやばくね？</br>【未来世代まで幸せになれる長崎を目指して】',
           title: '未来世代まで幸せになれる</br>長崎を目指して',
