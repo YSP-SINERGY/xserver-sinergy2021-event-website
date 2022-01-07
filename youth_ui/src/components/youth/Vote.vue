@@ -89,7 +89,7 @@
           presenter: '遠藤友香',
           caption: '目指せ脱プラ！海洋プラスチック問題について考えよう！',
           title: '目指せ脱プラ！</br>海洋プラスチック問題！',
-          explanation: '海洋生物がゴミ袋を誤食してしまったり、プラスチックバックが有料になったりと、プラスチック問題が身近になってきました。</br>≈その解決のために、私が卒業論文で行った農学部の視点から始めるエコ製品をご紹介します！',
+          explanation: '海洋生物がゴミ袋を誤食してしまったり、プラスチックバックが有料になったりと、プラスチック問題が身近になってきました。</br></br>その解決のために、私が卒業論文で行った農学部の視点から始めるエコ製品をご紹介します！',
           youtubeUrl: 'https://www.youtube.com/embed/1dUrajSNHc4', 
           imageUrl: require("@/assets/youth/y_endou.jpg"),
           isShow: false
