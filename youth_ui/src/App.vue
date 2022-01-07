@@ -35,6 +35,7 @@ export default {
     if (!(VueCookies.isKey('youth_vote_date'))) { // 投票日に関するクッキーが存在しない場合
       VueCookies.set('youth_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
       VueCookies.set('youth_if_voted', false);
+      VueCookies.set('youth_user_agent', navigator.userAgent);
     }
     axios.get('https://api.ipify.org?format=json')
       .then(res => {

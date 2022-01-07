@@ -51,8 +51,8 @@
               class="text-subtitle-1 justify-center"
               >
                 <!-- 投票が有効な期間で、クッキー上で未投票であれば -->
-                <font size="-1" v-if="check_if_voting_period() && !check_if_voted()"><strong>投票を確定しますか？</strong></font>
-                <font size="-1" v-else-if="check_if_voting_period() && check_if_voted()"><strong>本日は既に投票済みです。</strong></font>
+                <font size="-1" v-if="check_if_voting_period() && !check_if_voted() && check_if_valid_user_agent()"><strong>投票を確定しますか？</strong></font>
+                <font size="-1" v-else-if="check_if_voting_period() && check_if_voted() && check_if_valid_user_agent()"><strong>本日は既に投票済みです。</strong></font>
                 <font size="-1" v-else><strong>投票期間ではありません。</strong></font>
                 </v-card-title>
                 <v-card-actions>
@@ -118,7 +118,9 @@
         try {
           await axios.patch(
             endpoint,
-            { id: this.item.id }
+            { id: this.item.id },
+            { ip: VueCookies.get('ip') },
+            { user_agent: VueCookies.get('user_agent') },
           );
           alert("投票完了しました。")
           // 投票成功したら
@@ -149,6 +151,10 @@
           return false
         }
       },
+      check_if_valid_user_agent() {
+        // ここでDBからユーザーのIPやユーザーエージェントの情報を取得し、有効やユーザーか確認する。
+        return true;
+      }
     }
   }
 </script>
