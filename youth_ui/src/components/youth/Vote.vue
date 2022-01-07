@@ -61,6 +61,8 @@
 </template>
 
 <script>
+  import axios from 'axios';
+  import VueCookies from 'vue-cookies';
   import Modal from './Modal.vue'
   import applicationForm from './ApplicationForm.vue'
 
@@ -95,7 +97,7 @@
           presenter: '遠藤友香',
           caption: '目指せ脱プラ！海洋プラスチック問題について考えよう！',
           title: '目指せ脱プラ！</br>海洋プラスチック問題！',
-          explanation: '海洋生物がゴミ袋を誤食してしまったり、プラスチックバックが有料になったりと、プラスチック問題が身近になってきました。</br>≈その解決のために、私が卒業論文で行った農学部の視点から始めるエコ製品をご紹介します！',
+          explanation: '海洋生物がゴミ袋を誤食してしまったり、プラスチックバックが有料になったりと、プラスチック問題が身近になってきました。</br></br>その解決のために、私が卒業論文で行った農学部の視点から始めるエコ製品をご紹介します！',
           youtubeUrl: 'https://www.youtube.com/embed/1dUrajSNHc4', 
           imageUrl: require("@/assets/youth/y_endou.jpg"),
           isShow: false
@@ -123,7 +125,7 @@
         { 
           id: 5, 
           presenter: '小野村華楠',
-          caption: '「NOMORE Child Marriage </br>-ニジェール共和国における</br>児童婚防止キャンペーン」',
+          caption: '「NOMORE Child Marriage </br>-ニジェール共和国における児童婚防止キャンペーン」',
           title: 'ニジェールの児童婚</br>防止キャンペーン',
           explanation: '私は12歳で結婚した。</br>皆さんは児童婚について知っていますか？</br>児童婚は、10代の子供たちが強制的に結婚をさせられることを意味します。</br></br>特にアフリカのニジェールでは、深刻な問題となっています。そこで、今回はこの問題を解決するためのキャンペーンを立ち上げました！どうぞ応援よろしくお願い致します！',
           youtubeUrl: 'https://www.youtube.com/embed/GFpBk7bWORk',
@@ -170,6 +172,16 @@
           imageUrl: require("@/assets/youth/y_honda.jpg"),
           isShow: false
         },
+        // { // 辞退
+        //   id: 10, 
+        //   presenter: '園部達也',
+        //   caption: 'YSP活動を通して感じたことや学んだこと',
+        //   title: 'タイトル未定',
+        //   explanation: '',
+        //   youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
+        //   imageUrl: require("@/assets/youth/y_sonobe.jpg"),
+        //   isShow: false
+        // },
         // { 
         //   id: 11, //連絡なし、追加可能性あり
         //   presenter: '木村晃介',
@@ -195,6 +207,19 @@
     },
     methods: {
       openModal (item) {
+        // クッキーが存在しないか、クッキーが生成されてから一日あるいは二日経過している場合。
+        if (!(VueCookies.isKey('youth_vote_date'))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 9))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 10))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 9) && (new Date().getDate() === 10))) {
+          VueCookies.set('youth_if_voted', false);
+          VueCookies.set('youth_user_agent', navigator.userAgent);
+        }
+        axios.get('https://api.ipify.org?format=json')
+          .then(res => {
+            VueCookies.set('youth_ip', res.data.ip);
+            VueCookies.get('youth_ip')
+        });
         this.selectedItem = item;
         console.log(item);
         

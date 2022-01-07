@@ -1,3 +1,4 @@
+DROP DATABASE `votes_db`;
 CREATE DATABASE IF NOT EXISTS `votes_db`;
 USE `votes_db`;
 
@@ -61,7 +62,6 @@ INSERT INTO `teens_vote` (`id`) VALUES (DEFAULT);
 INSERT INTO `teens_vote` (`id`) VALUES (DEFAULT);
 INSERT INTO `teens_vote` (`id`) VALUES (DEFAULT);
 
-
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '大友希野');
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '遠藤友香');
 INSERT INTO `youth_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '舟橋彰馬');
@@ -79,16 +79,3 @@ INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '水沼�
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '田井理蓮');
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '佐藤彩乃');
 INSERT INTO `teens_presenter` (`id`, `presenter_name`) VALUES (DEFAULT, '川見菜緒');
-
--- DELIMITER //
-
--- CREATE PROCEDURE myproc()
--- BEGIN
---     DECLARE i int DEFAULT 0;
---     WHILE i < 18 DO
---         INSERT INTO `vote` (`id`) VALUES (DEFAULT);
---         SET i = i + 1;
---     END WHILE;
--- END //
-
--- DELIMITER ;
