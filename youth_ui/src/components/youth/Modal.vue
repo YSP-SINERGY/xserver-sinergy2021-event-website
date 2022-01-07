@@ -22,7 +22,8 @@
           <div class="px-1 ">
             <h4 class="py-3 name-box text-h5">{{ item.presenter }}</h4>
             <h5 class="text-center px-5 mt-6 mb-6 text-h6" v-html="item.caption"></h5>
-            <p class="text-left px-5 pb-6 text-caption" v-html="item.explanation"></p>
+            <p class="text-left px-10 pa-5 text-subtitle-1 hidden-sm-and-down" v-html="item.explanation"></p>
+            <p class="text-left px-5 pb-6 text-caption hidden-sm-and-up" v-html="item.explanation"></p>
           </div>
     
           <v-dialog

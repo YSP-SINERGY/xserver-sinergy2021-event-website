@@ -97,7 +97,7 @@
           presenter: '遠藤友香',
           caption: '目指せ脱プラ！海洋プラスチック問題について考えよう！',
           title: '目指せ脱プラ！</br>海洋プラスチック問題！',
-          explanation: '海洋生物がゴミ袋を誤食してしまったり、プラスチックバックが有料になったりと、プラスチック問題が身近になってきました。</br>≈その解決のために、私が卒業論文で行った農学部の視点から始めるエコ製品をご紹介します！',
+          explanation: '海洋生物がゴミ袋を誤食してしまったり、プラスチックバックが有料になったりと、プラスチック問題が身近になってきました。</br></br>その解決のために、私が卒業論文で行った農学部の視点から始めるエコ製品をご紹介します！',
           youtubeUrl: 'https://www.youtube.com/embed/1dUrajSNHc4', 
           imageUrl: require("@/assets/youth/y_endou.jpg"),
           isShow: false
@@ -125,7 +125,7 @@
         { 
           id: 5, 
           presenter: '小野村華楠',
-          caption: '「NOMORE Child Marriage </br>-ニジェール共和国における</br>児童婚防止キャンペーン」',
+          caption: '「NOMORE Child Marriage </br>-ニジェール共和国における児童婚防止キャンペーン」',
           title: 'ニジェールの児童婚</br>防止キャンペーン',
           explanation: '私は12歳で結婚した。</br>皆さんは児童婚について知っていますか？</br>児童婚は、10代の子供たちが強制的に結婚をさせられることを意味します。</br></br>特にアフリカのニジェールでは、深刻な問題となっています。そこで、今回はこの問題を解決するためのキャンペーンを立ち上げました！どうぞ応援よろしくお願い致します！',
           youtubeUrl: 'https://www.youtube.com/embed/GFpBk7bWORk',
