@@ -88,7 +88,7 @@
           caption: '”誰でも”使える○○の使い方！',
           title: '”誰でも”使える</br>○○の使い方！',
           explanation: '私がプレゼンさせていただくのは「誰でも使える〇〇の使い方」です！</br></br>現在、情報化社会の中で生きていますが今回は皆さんにスマホの使いすぎについての解決策というのをお伝えしたいと思います！',
-          youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
+          youtubeUrl: 'https://www.youtube.com/embed/OumMJzxqvc8',
           imageUrl: require("@/assets/teens/t_yamakawa.jpg"),
           isShow: false
         },
@@ -104,11 +104,11 @@
         },
         { 
           id: 4,  
-          presenter: '水沼ゆきの',
+          presenter: '水沼千乃',
           caption: '自分を変えたい！を原動力に',
           title: '自分を変えたい！</br>を原動力に</br>',
           explanation: '私は今回、｢自分を変えたい！を原動力に｣というテーマでプレゼンを発表させていただきます。</br></br>自分を変えたいと思っている人の後押しをしたいと思い、このプレゼンに挑戦してみました。',
-          youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
+          youtubeUrl: 'https://www.youtube.com/embed/f8E8UwEQZ_U',
           imageUrl: require("@/assets/teens/t_mizunuma.jpg"),
           isShow: false
         },
@@ -128,7 +128,7 @@
           caption: '様々な問題で苦しむ単身家庭の架け橋に！！',
           title: '様々な問題で苦しむ</br>単身家庭の架け橋に！',
           explanation: '今回私は皆さんに単身家庭の抱える問題について一つでも多く知っていただきたいと思います。</br></br>そして私が提案するどの年代層の方でも簡単に寄付支援ができる仕組みを通して、少しでも多くの貧困で苦しんでいる単身家庭の方々の救いの手になり、私たちが相対的貧困率を減らす架け橋になっていきましょう。',
-          youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
+          youtubeUrl: 'https://www.youtube.com/embed/rLkVQPjki1A',
           imageUrl: require("@/assets/teens/t_satou.jpg"),
           isShow: false
         },
