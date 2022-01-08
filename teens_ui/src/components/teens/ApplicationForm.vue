@@ -29,12 +29,14 @@
         </v-card-title>
 
         <v-card-text>
-          <v-img
-            src="@/assets/application_form/present.jpg"
-            class = "pa-5 mt-10"
-            aspect-ratio="2"
-            contain
-          ></v-img>
+          <a href="https://forms.gle/o8asiUhFbfRmXAHh9" target="_blank">
+            <v-img
+              src="@/assets/application_form/present.jpg"               
+              class = "pa-5 mt-10"
+              aspect-ratio="2"
+              contain          
+            ></v-img>
+          </a>
         </v-card-text>
 
         <v-divider></v-divider>
