@@ -20,7 +20,7 @@
         <v-card-title 
           class="
           justify-center 
-          text-subtitle-1
+          text-caption
           orange 
           lighten-2
           hidden-sm-and-up"
