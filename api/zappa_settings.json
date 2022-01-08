@@ -1,9 +1,9 @@
 {
-    "production": {
+    "dev": {
         "app_function": "run.app",
         "profile_name": "zappa2",
         "project_name": "api",
         "runtime": "python3.9",
-        "s3_bucket": "zappa-1k1e8ngpr"
+        "s3_bucket": "zappa-03nbf05ol"
     }
 }

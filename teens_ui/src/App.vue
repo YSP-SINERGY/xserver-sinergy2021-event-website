@@ -37,9 +37,6 @@ export default {
       VueCookies.set('teens_if_voted', false);
       VueCookies.set('teens_user_agent', navigator.userAgent);
     }
-    // if (new Date().toLocaleString({ timeZone: 'Asia/Tokyo' }) >= new Date("2022-01-10T11:00:00Z").toLocaleString({ timeZone: 'Asia/Tokyo' })) {
-    //   VueCookies.set('teens_if_voted', true);
-    // }
     axios.get('https://api.ipify.org?format=json')
       .then(res => {
         VueCookies.set('teens_ip', res.data.ip);
