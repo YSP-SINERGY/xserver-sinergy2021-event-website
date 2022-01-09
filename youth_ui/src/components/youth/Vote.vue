@@ -61,8 +61,7 @@
 </template>
 
 <script>
-  import axios from 'axios';
-  import VueCookies from 'vue-cookies';
+  import VueCookies from 'vue-cookies'
   import Modal from './Modal.vue'
   import applicationForm from './ApplicationForm.vue'
 
