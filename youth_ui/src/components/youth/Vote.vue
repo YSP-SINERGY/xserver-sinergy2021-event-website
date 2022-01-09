@@ -61,8 +61,6 @@
 </template>
 
 <script>
-  import axios from 'axios';
-  import VueCookies from 'vue-cookies';
   import Modal from './Modal.vue'
   import applicationForm from './ApplicationForm.vue'
 
@@ -90,7 +88,8 @@
           explanation: '私たちは宮城県を中心に活動するデザインプロジェクトチームです。普段は地域貢献のために、お店や商品撮影、イベントやお笑いライブなど様々な分野の撮影を行なっています。</br></br>ぜひNONOSTYLEをご覧ください！',
           youtubeUrl: 'https://www.youtube.com/embed/Luv6YusOsls', 
           imageUrl: require("@/assets/youth/y_otomo.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 167
         },
         { 
           id: 2, 
@@ -100,7 +99,8 @@
           explanation: '海洋生物がゴミ袋を誤食してしまったり、プラスチックバックが有料になったりと、プラスチック問題が身近になってきました。</br></br>その解決のために、私が卒業論文で行った農学部の視点から始めるエコ製品をご紹介します！',
           youtubeUrl: 'https://www.youtube.com/embed/1dUrajSNHc4', 
           imageUrl: require("@/assets/youth/y_endou.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 154
         },
         { 
           id: 3, 
@@ -110,7 +110,8 @@
           explanation: '近年注目が高まっている海洋プラスチックごみ問題ですが、私たちにも身近な問題です。</br></br>生活には欠かせないプラスチックが海洋環境を危機にさらしています。</br></br>私たちPSWと一緒に取り組んでほしいと思っています。',
           youtubeUrl: 'https://www.youtube.com/embed/J_WY6-6GJjM',
           imageUrl: require("@/assets/youth/y_funabashi_shouma.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 64
         },
         { 
           id: 4,  
@@ -120,7 +121,8 @@
           explanation: 'PEACE BIWAICHIプロジェクトについて発表します。</br></br>みなさんに３つの問題を考えていただき、</br>そこから生まれた活動の内容を紹介しています。</br></br>このプロジェクトに関心を持って頂き、ぜひ一度参加して頂きたいです。',
           youtubeUrl: 'https://www.youtube.com/embed/f5qNV7ylNeg',
           imageUrl: require("@/assets/youth/y_tougou.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 73
         },
         { 
           id: 5, 
@@ -130,7 +132,8 @@
           explanation: '私は12歳で結婚した。</br>皆さんは児童婚について知っていますか？</br>児童婚は、10代の子供たちが強制的に結婚をさせられることを意味します。</br></br>特にアフリカのニジェールでは、深刻な問題となっています。そこで、今回はこの問題を解決するためのキャンペーンを立ち上げました！どうぞ応援よろしくお願い致します！',
           youtubeUrl: 'https://www.youtube.com/embed/GFpBk7bWORk',
           imageUrl: require("@/assets/youth/y_onomura.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 19
         },
         { 
           id: 6, 
@@ -140,7 +143,8 @@
           explanation: 'いま、一大ブームが起きているサウナの魅力をニートとアフリカ起業の経験がある29歳男性の観点からお話します。</br></br>少しでも多くの人にサウナが最高！だと伝われば嬉しいです。',
           youtubeUrl: 'https://www.youtube.com/embed/gjwjMNltoc8',
           imageUrl: require("@/assets/youth/y_igarashi.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 580
         },
         { 
           id: 7, 
@@ -150,7 +154,8 @@
           explanation: '自分のことが嫌いだった私を変えてくれたのはアフリカでした。</br></br>しかし、現地人からのたった一言がきっかけで、ある悩みが生まれました。</br></br>それを解決し、愛と誇りに溢れた未来のために、私はオシャレをしています。',
           youtubeUrl: 'https://www.youtube.com/embed/mefEJadgUXg',
           imageUrl: require("@/assets/youth/y_saitou.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 101
         },
         { 
           id: 8, 
@@ -160,7 +165,8 @@
           explanation: '世界情勢を見て、不安を感じたことはありませんか？</br></br>世界は過去に1度も平和を見たことがありません。</br>このまま進んでも未来は見えないかもしれません。</br></br>「共生・共栄・共義」が鍵になると思っています！',
           youtubeUrl: 'https://www.youtube.com/embed/w01sRY9hgdc',//動画未取得>元々のurlに問題あり
           imageUrl: require("@/assets/youth/y_kumatani.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 150
         },
          { 
           id: 9, 
@@ -170,18 +176,9 @@
           explanation: '長崎って来たことありますか？</br> 長崎って山に囲まれ海に囲まれ、観光名所に囲まれている魅力溢れる都市。それが私の町です！</br></br>そんな私の町をもっと盛り上げていけるようなアイディアを発表します！',
           youtubeUrl: 'https://www.youtube.com/embed/XBPcUFKLh0o',
           imageUrl: require("@/assets/youth/y_honda.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 322
         },
-        // { // 辞退
-        //   id: 10, 
-        //   presenter: '園部達也',
-        //   caption: 'YSP活動を通して感じたことや学んだこと',
-        //   title: 'タイトル未定',
-        //   explanation: '',
-        //   youtubeUrl: 'https://www.youtube.com/embed/lUbQjAXRqKY',
-        //   imageUrl: require("@/assets/youth/y_sonobe.jpg"),
-        //   isShow: false
-        // },
         // { 
         //   id: 11, //連絡なし、追加可能性あり
         //   presenter: '木村晃介',
@@ -198,7 +195,7 @@
         //   imageUrl: require("@/assets/youth/girl.jpg"),
         //   isShow: false
         // }   
-      ].sort(() => 0.5 - Math.random());
+      ].sort((a, b) => (a.voteCount < b.voteCount) ? 1 : ((b.voteCount < a.voteCount) ? -1 : 0));
     },
     watch: {
       items (newItems) {
@@ -207,19 +204,6 @@
     },
     methods: {
       openModal (item) {
-        // クッキーが存在しないか、クッキーが生成されてから一日あるいは二日経過している場合。
-        if (!(VueCookies.isKey('youth_vote_date'))
-        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 9))
-        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 10))
-        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 9) && (new Date().getDate() === 10))) {
-          VueCookies.set('youth_if_voted', false);
-          VueCookies.set('youth_user_agent', navigator.userAgent);
-        }
-        axios.get('https://api.ipify.org?format=json')
-          .then(res => {
-            VueCookies.set('youth_ip', res.data.ip);
-            VueCookies.get('youth_ip')
-        });
         this.selectedItem = item;
         console.log(item);
         
@@ -228,9 +212,6 @@
       closeModal (index) {
         console.log(index)
         this.items[index].isShow = false
-      },
-      shuffleItems () {
-        this.items = this.items.sort(() => 0.5 - Math.random());
       },
       openApplicationFormModal () {
         console.log('hentai')

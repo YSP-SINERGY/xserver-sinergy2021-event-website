@@ -59,8 +59,6 @@
 </template>
 
 <script>
-  import axios from 'axios';
-  import VueCookies from 'vue-cookies';
   import Modal from './Modal.vue'
   import applicationForm from './ApplicationForm.vue'
 
@@ -88,7 +86,8 @@
           explanation: '「食品ロス」はお茶碗一杯が原因となって起こる問題です。</br></br>この問題に対する具体的な原因と対策について発表します！最後には登子(私)考案の画期的な対策方法も提案しています！ぜひご覧ください！',
           youtubeUrl: 'https://www.youtube.com/embed/U36ZiEvbV40',
           imageUrl: require("@/assets/teens/t_suganuma.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 22
         },
         { 
           id: 2, 
@@ -98,7 +97,8 @@
           explanation: '私がプレゼンさせていただくのは「誰でも使える〇〇の使い方」です！</br></br>現在、情報化社会の中で生きていますが今回は皆さんにスマホの使いすぎについての解決策というのをお伝えしたいと思います！',
           youtubeUrl: 'https://www.youtube.com/embed/OumMJzxqvc8',
           imageUrl: require("@/assets/teens/t_yamakawa.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 7
         },
         { 
           id: 3, 
@@ -108,7 +108,8 @@
           explanation: '身の回りに溢れている沢山の商品。皆さんは商品を生産している人々のことを考えたことはありますか？</br></br>また、世界で問題になっている貧困や児童労働の問題を知っていますか？</br></br>フェアトレードを通して一緒に解決しましょう。',
           youtubeUrl: 'https://www.youtube.com/embed/2KFqu7dujl8',
           imageUrl: require("@/assets/teens/t_onuki.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 15
         },
         { 
           id: 4,  
@@ -118,7 +119,8 @@
           explanation: '私は今回、｢自分を変えたい！を原動力に｣というテーマでプレゼンを発表させていただきます。</br></br>自分を変えたいと思っている人の後押しをしたいと思い、このプレゼンに挑戦してみました。',
           youtubeUrl: 'https://www.youtube.com/embed/f8E8UwEQZ_U',
           imageUrl: require("@/assets/teens/t_mizunuma.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 4
         },
         { 
           id: 5, 
@@ -128,7 +130,8 @@
           explanation: '今や世界はグローバル社会の時代。そんな時代を生きる私たちのあるべき姿とはどのようなものでしょうか。</br></br>誰一人取り残されないグローバル社会を築くために、今回、あるプロジェクトを提案します！',
           youtubeUrl: 'https://www.youtube.com/embed/U2cSAVWNr8Q',
           imageUrl: require("@/assets/teens/t_tai.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 41
         },
         { 
           id: 6, 
@@ -138,7 +141,8 @@
           explanation: '今回私は皆さんに単身家庭の抱える問題について一つでも多く知っていただきたいと思います。</br></br>そして私が提案するどの年代層の方でも簡単に寄付支援ができる仕組みを通して、少しでも多くの貧困で苦しんでいる単身家庭の方々の救いの手になり、私たちが相対的貧困率を減らす架け橋になっていきましょう。',
           youtubeUrl: 'https://www.youtube.com/embed/rLkVQPjki1A',
           imageUrl: require("@/assets/teens/t_satou.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 5
         },
         { 
           id: 7, 
@@ -148,9 +152,11 @@
           explanation: '友人との会話をきっかけにコミュニケーションの取り方を意識するようになり、大きな気付きがありました。</br></br>心を開いている人とこそ、互いのやりとりが成立しているか意識するきっかけとなればと思います。',
           youtubeUrl: 'https://www.youtube.com/embed/HgZEF5isWAU',
           imageUrl: require("@/assets/teens/t_kawami.jpg"),
-          isShow: false
+          isShow: false,
+          voteCount: 25
         } 
-      ].sort(() => 0.5 - Math.random());
+      ].sort((a, b) => (a.voteCount < b.voteCount) ? 1 : ((b.voteCount < a.voteCount) ? -1 : 0));
+      // ].sort(() => 0.5 - Math.random());
     },
     watch: {
       items (newItems) {
@@ -159,19 +165,6 @@
     },
     methods: {
       openModal (item) {
-        // クッキーが存在しないか、クッキーが生成されてから一日あるいは二日経過している場合。
-        if (!(VueCookies.isKey('teens_vote_date'))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 8) && (new Date().getDate() === 9))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 8) && (new Date().getDate() === 10))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 9) && (new Date().getDate() === 10))) {
-          VueCookies.set('teens_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
-          VueCookies.set('teens_if_voted', false);
-          VueCookies.set('teens_user_agent', navigator.userAgent);
-        }
-        axios.get('https://api.ipify.org?format=json')
-          .then(res => {
-            VueCookies.set('teens_ip', res.data.ip);
-        });
         this.selectedItem = item;
         console.log(item);
         
