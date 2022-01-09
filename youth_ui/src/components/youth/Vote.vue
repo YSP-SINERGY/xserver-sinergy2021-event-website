@@ -61,6 +61,8 @@
 </template>
 
 <script>
+  import axios from 'axios';
+  import VueCookies from 'vue-cookies';
   import Modal from './Modal.vue'
   import applicationForm from './ApplicationForm.vue'
 
@@ -188,6 +190,19 @@
     },
     methods: {
       openModal (item) {
+        // クッキーが存在しないか、クッキーが生成されてから一日あるいは二日経過している場合。
+        if (!(VueCookies.isKey('youth_vote_date'))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 9))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 8) && (new Date().getDate() === 10))
+        || ((new Date(VueCookies.get('youth_vote_date')).getDate() === 9) && (new Date().getDate() === 10))) {
+          VueCookies.set('youth_if_voted', false);
+          VueCookies.set('youth_user_agent', navigator.userAgent);
+        }
+        axios.get('https://api.ipify.org?format=json')
+          .then(res => {
+            VueCookies.set('youth_ip', res.data.ip);
+            VueCookies.get('youth_ip')
+        });
         this.selectedItem = item;
         console.log(item);
         
