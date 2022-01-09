@@ -91,7 +91,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/Luv6YusOsls', 
           imageUrl: require("@/assets/youth/y_otomo.jpg"),
           isShow: false,
-          voteCount: 167
+          voteCount: 415
         },
         { 
           id: 2, 
@@ -102,7 +102,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/1dUrajSNHc4', 
           imageUrl: require("@/assets/youth/y_endou.jpg"),
           isShow: false,
-          voteCount: 154
+          voteCount: 381
         },
         { 
           id: 3, 
@@ -113,7 +113,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/J_WY6-6GJjM',
           imageUrl: require("@/assets/youth/y_funabashi_shouma.jpg"),
           isShow: false,
-          voteCount: 64
+          voteCount: 152
         },
         { 
           id: 4,  
@@ -124,7 +124,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/f5qNV7ylNeg',
           imageUrl: require("@/assets/youth/y_tougou.jpg"),
           isShow: false,
-          voteCount: 73
+          voteCount: 157
         },
         { 
           id: 5, 
@@ -135,7 +135,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/GFpBk7bWORk',
           imageUrl: require("@/assets/youth/y_onomura.jpg"),
           isShow: false,
-          voteCount: 19
+          voteCount: 42
         },
         { 
           id: 6, 
@@ -146,7 +146,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/gjwjMNltoc8',
           imageUrl: require("@/assets/youth/y_igarashi.jpg"),
           isShow: false,
-          voteCount: 580
+          voteCount: 1047
         },
         { 
           id: 7, 
@@ -157,7 +157,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/mefEJadgUXg',
           imageUrl: require("@/assets/youth/y_saitou.jpg"),
           isShow: false,
-          voteCount: 101
+          voteCount: 294
         },
         { 
           id: 8, 
@@ -168,7 +168,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/w01sRY9hgdc',//動画未取得>元々のurlに問題あり
           imageUrl: require("@/assets/youth/y_kumatani.jpg"),
           isShow: false,
-          voteCount: 150
+          voteCount: 329
         },
          { 
           id: 9, 
@@ -179,7 +179,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/XBPcUFKLh0o',
           imageUrl: require("@/assets/youth/y_honda.jpg"),
           isShow: false,
-          voteCount: 322
+          voteCount: 721
         },
       ].sort((a, b) => (a.voteCount < b.voteCount) ? 1 : ((b.voteCount < a.voteCount) ? -1 : 0));
     },
@@ -201,7 +201,6 @@
         axios.get('https://api.ipify.org?format=json')
           .then(res => {
             VueCookies.set('youth_ip', res.data.ip);
-            VueCookies.get('youth_ip')
         });
         this.selectedItem = item;
         console.log(item);

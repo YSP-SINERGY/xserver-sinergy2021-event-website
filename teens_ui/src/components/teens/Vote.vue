@@ -89,7 +89,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/U36ZiEvbV40',
           imageUrl: require("@/assets/teens/t_suganuma.jpg"),
           isShow: false,
-          voteCount: 22
+          voteCount: 44
         },
         { 
           id: 2, 
@@ -100,7 +100,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/OumMJzxqvc8',
           imageUrl: require("@/assets/teens/t_yamakawa.jpg"),
           isShow: false,
-          voteCount: 7
+          voteCount: 19
         },
         { 
           id: 3, 
@@ -111,7 +111,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/2KFqu7dujl8',
           imageUrl: require("@/assets/teens/t_onuki.jpg"),
           isShow: false,
-          voteCount: 15
+          voteCount: 31
         },
         { 
           id: 4,  
@@ -122,7 +122,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/f8E8UwEQZ_U',
           imageUrl: require("@/assets/teens/t_mizunuma.jpg"),
           isShow: false,
-          voteCount: 4
+          voteCount: 14
         },
         { 
           id: 5, 
@@ -133,7 +133,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/U2cSAVWNr8Q',
           imageUrl: require("@/assets/teens/t_tai.jpg"),
           isShow: false,
-          voteCount: 41
+          voteCount: 70
         },
         { 
           id: 6, 
@@ -144,7 +144,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/rLkVQPjki1A',
           imageUrl: require("@/assets/teens/t_satou.jpg"),
           isShow: false,
-          voteCount: 5
+          voteCount: 17
         },
         { 
           id: 7, 
@@ -155,7 +155,7 @@
           youtubeUrl: 'https://www.youtube.com/embed/HgZEF5isWAU',
           imageUrl: require("@/assets/teens/t_kawami.jpg"),
           isShow: false,
-          voteCount: 25
+          voteCount: 59
         } 
       ].sort((a, b) => (a.voteCount < b.voteCount) ? 1 : ((b.voteCount < a.voteCount) ? -1 : 0));
       // ].sort(() => 0.5 - Math.random());
