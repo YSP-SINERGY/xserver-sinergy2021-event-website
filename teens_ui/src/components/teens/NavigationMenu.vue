@@ -29,7 +29,7 @@
         <v-btn 
           text 
           class="white--text mt-2"
-          :href="'https://dev.inergy2021.org'"
+          :href="'https://dev.sinergy2021.org'"
           target="_blank"
         >
           YOUTHページへ移動
