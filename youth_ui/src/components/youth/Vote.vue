@@ -201,7 +201,6 @@
         axios.get('https://api.ipify.org?format=json')
           .then(res => {
             VueCookies.set('youth_ip', res.data.ip);
-            VueCookies.get('youth_ip')
         });
         this.selectedItem = item;
         console.log(item);
