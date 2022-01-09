@@ -131,6 +131,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // const endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/`; // dev環境
         const endpoint = `https://was71zjlhi.execute-api.ap-northeast-1.amazonaws.com/production/api/v1/youth_votes/`; // production環境
 =======
@@ -142,6 +143,9 @@
 =======
         const endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/youth_votes/`; // 本番ではproductionに切り替える
 >>>>>>> rechanged environment from production to dev
+=======
+        const endpoint = `https://was71zjlhi.execute-api.ap-northeast-1.amazonaws.com/production/api/v1/youth_votes/`; // 本番ではproductionに切り替える
+>>>>>>> switched dev environment to production one for updating presenters' votes
         try {
           let response = await axios.patch(
             endpoint,
