@@ -27,7 +27,7 @@
         <div class = "hidden-sm-and-up pa-2">
           <img
             alt = "プレゼン シナジー2021 youth"
-            src="@/assets/midterm_report/teens_vote_0108_sp_min.jpg" 
+            src="@/assets/midterm_report/teens_vote_0109_sp_min.jpg" 
             width="100%"
           > 
           <p 
@@ -36,7 +36,7 @@
             text--darken-4
             text-caption"
           ><br>
-            1/8終了時点の投票数<br><br>
+            1/9終了時点の投票数<br><br>
           </p>
         </div>
           
