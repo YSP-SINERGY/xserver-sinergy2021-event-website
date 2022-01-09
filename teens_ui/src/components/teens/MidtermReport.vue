@@ -8,7 +8,7 @@
       <div class = "hidden-sm-and-down pa-6">
           <img
             alt = "プレゼン シナジー2021 youth"
-            src="@/assets/midterm_report/midterm_pc.jpg" 
+            src="@/assets/midterm_report/teens_vote_0108_PC_min.jpg" 
             width="100%"
           > 
           <p 
@@ -17,7 +17,7 @@
             text--darken-2
             text-h6"
           ><br>
-            1月8日の投票数になります。<br><br>
+            1/8終了時点の投票数<br><br>
           </p>
         </div>
           
@@ -27,7 +27,7 @@
         <div class = "hidden-sm-and-up pa-2">
           <img
             alt = "プレゼン シナジー2021 youth"
-            src="@/assets/midterm_report/midterm_sp.jpg" 
+            src="@/assets/midterm_report/teens_vote_0108_sp_min.jpg" 
             width="100%"
           > 
           <p 
@@ -36,7 +36,7 @@
             text--darken-4
             text-caption"
           ><br>
-            1月8日の投票数になります。<br><br>
+            1/8終了時点の投票数<br><br>
           </p>
         </div>
           
