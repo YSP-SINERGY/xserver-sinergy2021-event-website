@@ -1,6 +1,8 @@
 <template>
   <div class="home">
     <div class="home-container">
+
+      <div class="midterm-report"><midterm-report></midterm-report></div>
       <div class="top"><top></top></div>
       <div class="voting-system"><voting-system></voting-system></div>
       <div class="vote"><vote></vote></div>
@@ -20,6 +22,7 @@ import TwitterTimeline from './TwitterTimeline.vue'
 import VotingSystem from './VotingSystem.vue'
 import Sponsor from './Sponsor.vue'
 import Contributor from './Contributor.vue'
+import MidtermReport from './MidtermReport.vue'
 
 export default {
   name: 'Home',
@@ -30,7 +33,8 @@ export default {
     TwitterTimeline,
     VotingSystem,
     Sponsor,
-    Contributor
+    Contributor,
+    MidtermReport
     
   },
   props: {
