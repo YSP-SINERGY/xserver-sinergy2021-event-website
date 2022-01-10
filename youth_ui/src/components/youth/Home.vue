@@ -2,9 +2,10 @@
   <div class="home">
     <div class="home-container">
 
-      <div class="midterm-report"><midterm-report></midterm-report></div>
+      <!-- <div class="midterm-report"><midterm-report></midterm-report></div> -->
+      <div class="finalresults"><final-results></final-results></div>
       <div class="top "><top></top></div>
-      <div class="voting-system"><voting-system></voting-system></div>
+      <!-- <div class="voting-system"><voting-system></voting-system></div> -->
       <div class="vote"><vote></vote></div>
       <div class="organizer"><organizer></organizer></div>
       <div class="sponsor"><sponsor></sponsor></div>
@@ -19,10 +20,11 @@ import Top from "./Top.vue"
 import Vote from './Vote.vue'
 import Organizer from './Organizer.vue'
 import TwitterTimeline from './TwitterTimeline.vue'
-import VotingSystem from './VotingSystem.vue'
+// import VotingSystem from './VotingSystem.vue'
 import Sponsor from './Sponsor.vue'
 import Contributor from './Contributor.vue'
-import MidtermReport from './MidtermReport.vue'
+// import MidtermReport from './MidtermReport.vue'
+import FinalResults from './FinalResults.vue'
 
 
 export default {
@@ -32,10 +34,9 @@ export default {
     Vote,
     Organizer,
     TwitterTimeline,
-    VotingSystem,
     Sponsor,
     Contributor,
-    MidtermReport
+    FinalResults
     
   },
   props: {

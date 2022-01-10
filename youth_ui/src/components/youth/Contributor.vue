@@ -43,23 +43,30 @@
           text--darken-3
           text-h6"
         ><br>
-          Komushiさん &ensp; 
-          Akihiro Nishimotoさん &ensp; 
-          よぴぴ梅さん &ensp; 
-          <br>
-          みみさん &ensp; 
-          ちーすけさん &ensp; 
-          はまさん &ensp; 
-          3000さん &ensp; 
-          <br>  
-          Fumika.Aさん &ensp; 
-          仁さん &ensp; 
-          河合健太さん &ensp; 
-          choko115さん &ensp; 
-          <br>
-          A.Kazu&Hiroさん &ensp; 
-          みんなの居場所よってカフェさん &ensp; 
-          <br>
+            Komushiさん &nbsp;
+            AkihiroNishimotoさん&nbsp; 
+            仁さん
+            3000さん &nbsp; 
+            みみさん &nbsp;
+            ちーすけさん &nbsp;
+            <br>
+            はまさん
+            よぴぴ梅さん &nbsp; 
+            A.Kazu&Hiroさん &nbsp; 
+            マツケン  &ensp; 
+            河合健太さん &nbsp; 
+            choko115さん &nbsp;
+            <br>
+            Fumika.Aさん 
+            みんなの居場所よってカフェさん &nbsp;
+            あさちゃんさん  &ensp; 
+            りおさん &ensp; 
+            <br>
+            トゥイーティーさん &ensp; 
+            たむそんさん  &ensp; 
+            kuniminaさん  &ensp; 
+            イジナシさん  &ensp; 
+            さよさん  &ensp; 
         </p>
       </div>
 
@@ -84,13 +91,21 @@
             <br>
             よぴぴ梅さん &nbsp; 
             A.Kazu&Hiroさん &nbsp; 
+            マツケン  &ensp; 
             <br>
             河合健太さん &nbsp; 
             choko115さん &nbsp;
             Fumika.Aさん 
             <br>
             みんなの居場所よってカフェさん &nbsp;
-            <br>  
+            あさちゃんさん 
+            <br>
+            りおさん &nbsp; 
+            トゥイーティーさん &nbsp; 
+            たむそんさん  &nbsp; 
+            kuniminaさん  &nbsp; 
+            イジナシさん  &nbsp; 
+            さよさん  &nbsp; 
         </p>
       </div>
   

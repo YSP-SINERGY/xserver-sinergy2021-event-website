@@ -32,7 +32,7 @@
             persistent
             width="300"
           >
-            <template v-slot:activator="{ on, attrs }">
+            <!-- <template v-slot:activator="{ on, attrs }">
               <v-btn
                 variant="secondary"
                 color="blue-grey darken-4"
@@ -41,7 +41,7 @@
                 v-on="on"
               >投票
               </v-btn>
-            </template>
+            </template> -->
 
             <!-- ここから変更 -->
             <v-card>

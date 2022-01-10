@@ -8,7 +8,7 @@
     <div >
       <v-row>
         <v-col
-          v-for="item in items"
+          v-for="item in sortVoteCount(items)"
           :key="item.id"
           cols="6"
           lg="4"
@@ -91,7 +91,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/Luv6YusOsls', 
           imageUrl: require("@/assets/youth/y_otomo.jpg"),
           isShow: false,
-          voteCount: 415
+          voteCount1: 167,
+          voteCount2: 415,
+          voteCount3: 0
         },
         { 
           id: 2, 
@@ -102,7 +104,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/1dUrajSNHc4', 
           imageUrl: require("@/assets/youth/y_endou.jpg"),
           isShow: false,
-          voteCount: 381
+          voteCount1: 154,
+          voteCount2: 381,
+          voteCount3: 0
         },
         { 
           id: 3, 
@@ -113,7 +117,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/J_WY6-6GJjM',
           imageUrl: require("@/assets/youth/y_funabashi_shouma.jpg"),
           isShow: false,
-          voteCount: 152
+          voteCount1: 64,
+          voteCount2: 152,
+          voteCount3: 0
         },
         { 
           id: 4,  
@@ -124,7 +130,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/f5qNV7ylNeg',
           imageUrl: require("@/assets/youth/y_tougou.jpg"),
           isShow: false,
-          voteCount: 157
+          voteCount1: 73,
+          voteCount2: 157,
+          voteCount3: 0
         },
         { 
           id: 5, 
@@ -135,7 +143,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/GFpBk7bWORk',
           imageUrl: require("@/assets/youth/y_onomura.jpg"),
           isShow: false,
-          voteCount: 42
+          voteCount1: 19,
+          voteCount2: 42,
+          voteCount3: 0
         },
         { 
           id: 6, 
@@ -146,7 +156,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/gjwjMNltoc8',
           imageUrl: require("@/assets/youth/y_igarashi.jpg"),
           isShow: false,
-          voteCount: 1047
+          voteCount1: 580,
+          voteCount2: 1047,
+          voteCount3: 0
         },
         { 
           id: 7, 
@@ -157,7 +169,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/mefEJadgUXg',
           imageUrl: require("@/assets/youth/y_saitou.jpg"),
           isShow: false,
-          voteCount: 294
+          voteCount1: 101,
+          voteCount2: 294,
+          voteCount3: 0
         },
         { 
           id: 8, 
@@ -168,7 +182,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/w01sRY9hgdc',//動画未取得>元々のurlに問題あり
           imageUrl: require("@/assets/youth/y_kumatani.jpg"),
           isShow: false,
-          voteCount: 329
+          voteCount1: 150,
+          voteCount2: 329,
+          voteCount3: 0
         },
          { 
           id: 9, 
@@ -179,9 +195,11 @@
           youtubeUrl: 'https://www.youtube.com/embed/XBPcUFKLh0o',
           imageUrl: require("@/assets/youth/y_honda.jpg"),
           isShow: false,
-          voteCount: 721
+          voteCount1: 322,
+          voteCount2: 721,
+          voteCount3: 0
         },
-      ].sort((a, b) => (a.voteCount < b.voteCount) ? 1 : ((b.voteCount < a.voteCount) ? -1 : 0));
+      ]
     },
     watch: {
       items (newItems) {
@@ -218,6 +236,9 @@
       openApplicationFormModal () {
         console.log('hentai')
         this.isApplicationFormModal = true  
+      },
+      sortVoteCount (items) {
+        return items.slice(0).sort((a, b) => (a.voteCount2 < b.voteCount2) ? 1 : ((b.voteCount2 < a.voteCount2) ? -1 : 0))
       }
     },
     computed: {

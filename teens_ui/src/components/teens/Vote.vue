@@ -8,7 +8,7 @@
     <div >
       <v-row>
         <v-col
-          v-for="item in items"
+          v-for="item in sortVoteCount(items)"
           :key="item.id"
           cols="6"
           lg="4"
@@ -89,7 +89,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/U36ZiEvbV40',
           imageUrl: require("@/assets/teens/t_suganuma.jpg"),
           isShow: false,
-          voteCount: 44
+          voteCount1: 22,
+          voteCount2: 44,
+          voteCount3: 0
         },
         { 
           id: 2, 
@@ -100,7 +102,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/OumMJzxqvc8',
           imageUrl: require("@/assets/teens/t_yamakawa.jpg"),
           isShow: false,
-          voteCount: 19
+          voteCount1: 7,
+          voteCount2: 19,
+          voteCount3: 0
         },
         { 
           id: 3, 
@@ -111,7 +115,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/2KFqu7dujl8',
           imageUrl: require("@/assets/teens/t_onuki.jpg"),
           isShow: false,
-          voteCount: 31
+          voteCount1: 15,
+          voteCount2: 31,
+          voteCount3: 0
         },
         { 
           id: 4,  
@@ -122,7 +128,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/f8E8UwEQZ_U',
           imageUrl: require("@/assets/teens/t_mizunuma.jpg"),
           isShow: false,
-          voteCount: 14
+          voteCount1: 4,
+          voteCount2: 14,
+          voteCount3: 0
         },
         { 
           id: 5, 
@@ -133,7 +141,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/U2cSAVWNr8Q',
           imageUrl: require("@/assets/teens/t_tai.jpg"),
           isShow: false,
-          voteCount: 70
+          voteCount1: 41,
+          voteCount2: 70,
+          voteCount3: 0
         },
         { 
           id: 6, 
@@ -144,7 +154,9 @@
           youtubeUrl: 'https://www.youtube.com/embed/rLkVQPjki1A',
           imageUrl: require("@/assets/teens/t_satou.jpg"),
           isShow: false,
-          voteCount: 17
+          voteCount1: 5,
+          voteCount2: 17,
+          voteCount3: 0
         },
         { 
           id: 7, 
@@ -155,10 +167,11 @@
           youtubeUrl: 'https://www.youtube.com/embed/HgZEF5isWAU',
           imageUrl: require("@/assets/teens/t_kawami.jpg"),
           isShow: false,
-          voteCount: 59
-        } 
-      ].sort((a, b) => (a.voteCount < b.voteCount) ? 1 : ((b.voteCount < a.voteCount) ? -1 : 0));
-      // ].sort(() => 0.5 - Math.random());
+          voteCount1: 25,
+          voteCount2: 59,
+          voteCount3: 0
+        },
+      ]
     },
     watch: {
       items (newItems) {
@@ -199,6 +212,9 @@
       openApplicationFormModal () {
         console.log('hentai')
         this.isApplicationFormModal = true  
+      },
+      sortVoteCount (items) {
+        return items.slice(0).sort((a, b) => (a.voteCount2 < b.voteCount2) ? 1 : ((b.voteCount2 < a.voteCount2) ? -1 : 0))
       }
     },
     computed: {
