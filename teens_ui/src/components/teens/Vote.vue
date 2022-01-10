@@ -167,7 +167,7 @@
     },
     methods: {
       openModal (item) {
-        let teens_vote_date = new Date(VueCookies.get('teens_vote_date'))
+        let teens_vote_date = new Date(VueCookies.get('teens_vote_date')) // クッキー上のデータからDateオブジェクトを生成
         if (!(VueCookies.isKey('teens_vote_date')) // クッキーが存在しないか
         || (teens_vote_date.getMonth() === 10) // 投票日以前にアクセスしていた場合クッキーを更新
         || (teens_vote_date.getMonth() === 11) // 投票日以前にアクセスしていた場合クッキーを更新
