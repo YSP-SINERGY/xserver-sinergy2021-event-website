@@ -128,7 +128,8 @@
     methods: {
       async sendVote () {
         // make a PATCH request to youth vote endpoint
-        const endpoint = `https://was71zjlhi.execute-api.ap-northeast-1.amazonaws.com/production/api/v1/youth_votes/`; // 本番ではproductionに切り替える
+        // const endpoint = `https://b73jc2zkfg.execute-api.ap-northeast-1.amazonaws.com/dev/api/v1/teens_votes/`; // dev環境
+        const endpoint = `https://was71zjlhi.execute-api.ap-northeast-1.amazonaws.com/production/api/v1/youth_votes/`; // production環境
         try {
           let response = await axios.patch(
             endpoint,
@@ -156,7 +157,8 @@
       check_if_voting_period () {
         let vote_date = VueCookies.get('youth_vote_date');
         if ((new Date("2022-01-07T15:00:00Z") <= new Date(vote_date))
-        && (new Date(vote_date) <= new Date("2022-01-10T11:00:00Z"))) { // 日本時間で投票期間であるかのチェック
+        && (new Date(vote_date) <= new Date("2022-01-10T11:00:00Z"))) // アクセス地域の時間で投票期間であるかのチェック
+        {
           return true;
         } else {
           return false;
