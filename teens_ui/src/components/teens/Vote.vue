@@ -167,11 +167,15 @@
     },
     methods: {
       openModal (item) {
-        // クッキーが存在しないか、クッキーが生成されてから一日あるいは二日経過している場合。
-        if (!(VueCookies.isKey('teens_vote_date'))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 8) && (new Date().getDate() === 9))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 8) && (new Date().getDate() === 10))
-        || ((new Date(VueCookies.get('teens_vote_date')).getDate() === 9) && (new Date().getDate() === 10))) {
+        let teens_vote_date = new Date(VueCookies.get('teens_vote_date'))
+        if (!(VueCookies.isKey('teens_vote_date')) // クッキーが存在しないか
+        || (teens_vote_date.getMonth() === 10) // 投票日以前にアクセスしていた場合クッキーを更新
+        || (teens_vote_date.getMonth() === 11) // 投票日以前にアクセスしていた場合クッキーを更新
+        || ((teens_vote_date.getMonth() === 0) && (0 <= teens_vote_date.getDate()) && (teens_vote_date.getDate() <= 7)) // 投票日以前にアクセスしていた場合クッキーを更新
+        || ((teens_vote_date.getMonth() === 0) && (teens_vote_date.getDate() === 8) && (new Date().getDate() === 9)) // クッキーが生成されてから一日あるいは二日経過している場合
+        || ((teens_vote_date.getMonth() === 0) && (teens_vote_date.getDate() === 8) && (new Date().getDate() === 10)) // クッキーが生成されてから一日あるいは二日経過している場合
+        || ((teens_vote_date.getMonth() === 0) && (teens_vote_date.getDate() === 9) && (new Date().getDate() === 10))) // クッキーが生成されてから一日あるいは二日経過している場合
+        {
           VueCookies.set('teens_vote_date', new Date().toLocaleString({ timeZone: 'Asia/Tokyo' })); // クッキーが生成された日時を日本標準時間で保存する
           VueCookies.set('teens_if_voted', false);
           VueCookies.set('teens_user_agent', navigator.userAgent);
