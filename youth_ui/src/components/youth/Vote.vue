@@ -194,7 +194,7 @@
         if (!(VueCookies.isKey('youth_vote_date')) // クッキーが存在しないか
         || (youth_vote_date.getMonth() === 10) // 投票日以前にアクセスしていた場合クッキーを更新
         || (youth_vote_date.getMonth() === 11) // 投票日以前にアクセスしていた場合クッキーを更新
-        || ((youth_vote_date.getMonth() === 0) && (0 <= youth_vote_date.getDate()) && (youth_vote_date.getDate() <= 7)) // 投票日以前にアクセスしていた場合クッキーを更新
+        || ((youth_vote_date.getMonth() === 0) && (1 <= youth_vote_date.getDate()) && (youth_vote_date.getDate() <= 7)) // 投票日以前にアクセスしていた場合クッキーを更新
         || ((youth_vote_date.getMonth() === 0) && (youth_vote_date.getDate() === 8) && (new Date().getDate() === 9)) // クッキーが生成されてから一日あるいは二日経過している場合
         || ((youth_vote_date.getMonth() === 0) && (youth_vote_date.getDate() === 8) && (new Date().getDate() === 10)) // クッキーが生成されてから一日あるいは二日経過している場合
         || ((youth_vote_date.getMonth() === 0) && (youth_vote_date.getDate() === 9) && (new Date().getDate() === 10))) // クッキーが生成されてから一日あるいは二日経過している場合
