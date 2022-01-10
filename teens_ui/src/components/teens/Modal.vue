@@ -158,7 +158,8 @@
       check_if_voting_period () {
         let vote_date = VueCookies.get('teens_vote_date');
         if ((new Date("2022-01-07T15:00:00Z") <= new Date(vote_date))
-        && (new Date(vote_date) <= new Date("2022-01-10T11:00:00Z"))) { // 日本時間で投票期間であるかのチェック
+        && (new Date(vote_date) <= new Date("2022-01-10T11:00:00Z"))) // アクセス地域の時間で投票期間であるかのチェック
+        {
           return true;
         } else {
           return false
