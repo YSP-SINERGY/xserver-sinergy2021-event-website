@@ -9,14 +9,23 @@
 
 <!-- 最終結果画像        --> 
     <div class = "pa-1">
+      <!-- PC        --> 
       <img
           alt = "プレゼン シナジー2021 youth"
           src="@/assets/final_results/youth_result_min.jpg" 
           width="100%"
+          class ="hidden-sm-and-down"
       > 
+     <!-- SP        --> 
+      <img
+          alt = "プレゼン シナジー2021 youth"
+          src="@/assets/final_results/youth_result_sp_min.jpg" 
+          width="100%"
+          class ="hidden-sm-and-up "
+      >
        <!-- PC        --> 
         <p 
-          class = "voting-description 
+          class = "
           text--darken-2
           text-h4
           hidden-sm-and-down
@@ -26,7 +35,7 @@
         </p>
       <!-- SP        --> 
         <p 
-          class = "voting-description 
+          class = "
           text--darken-2
           text-h6
           hidden-sm-and-up
@@ -38,10 +47,20 @@
 
 <!-- presenter情報   ベストシナジスト    --> 
     <v-row>
-        <div>
+      <!-- PC        --> 
+        <div class ="hidden-sm-and-down">
           <img
             alt = "プレゼン シナジー2021 youth"
             src="@/assets/final_results/youth_1st_min.jpg" 
+            width="100%"
+            class = "pa-1"
+          >
+        </div>
+      <!-- SP        --> 
+        <div class ="hidden-sm-and-up">
+          <img
+            alt = "プレゼン シナジー2021 youth"
+            src="@/assets/final_results/youth_1st_sp_min.jpg" 
             width="100%"
             class = "pa-1"
           >
@@ -114,80 +133,6 @@ iframe{
 	left:0;
 	width:100%;
 	height:100%;
-}
-
-.home-about__contents {
-  margin-top: 20px;
-  justify-content: center;
- 
-  &-img {
-    text-align: center;
-  }
- 
-  &-text {
-    word-wrap: break-word;
-  }
-}
-
-.v-card__text{
-  text-align: left; 
-  width: 100%;
-}
-.v-card__title{
-  padding: auto;
-}
-.section__title-text{
-  width: 100%;
-}
-.h1.a{
-  text-align: left;
-}
-
-.zoom-1 img {
-  max-width: 90%;
-  height: auto;
-  animation: animationZoom2 10s ease-in-out infinite;
-}
-.zoom {
-  max-width: 100%;
-  height: auto;
-  overflow: hidden;
-  margin-bottom: 30px
-}
-@keyframes animationZoom2 {
-  50% { transform:scale(1.1)} 
-}
-
-.p-class {
-  padding: 8%;
-  line-height: 25px;
-  text-align: justify;
-  text-justify: inter-ideograph;
-}
-.font-size {
-  font-size: 0.7rem;
-}
-.organizer-text-box {
-  height: auto;
-  text-align: left;
-  padding: 0 3%;
-}
-.margin-height-auto {
-  margin: auto 0;
-}
-@media only screen and (max-width: 600px) {
-  .font-size {
-    font-size: 0.6rem;
-  }  
-  .organizer-text-box {
-    font-size: .75rem;
-  }
-  .mobile-organizer-text-box {
-    padding: 0 1%;
-  }
-  .column-reserve-row {
-    flex-direction: column-reverse;
-  }
 }
 
 </style>
