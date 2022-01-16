@@ -41,32 +41,47 @@
           hidden-sm-and-down 
           grey--text
           text--darken-3
-          text-h6"
+          px-1
+          text-subtitle-1"
         ><br>
-            Komushiさん &nbsp;
+            Komushiさん&nbsp;
             AkihiroNishimotoさん&nbsp; 
-            仁さん
-            3000さん &nbsp; 
-            みみさん &nbsp;
-            ちーすけさん &nbsp;
-            <br>
-            はまさん
-            よぴぴ梅さん &nbsp; 
-            A.Kazu&Hiroさん &nbsp; 
-            マツケン  &ensp; 
-            河合健太さん &nbsp; 
-            choko115さん &nbsp;
-            <br>
-            Fumika.Aさん 
-            みんなの居場所よってカフェさん &nbsp;
-            あさちゃんさん  &ensp; 
-            りおさん &ensp; 
-            <br>
-            トゥイーティーさん &ensp; 
-            たむそんさん  &ensp; 
-            kuniminaさん  &ensp; 
-            イジナシさん  &ensp; 
-            さよさん  &ensp; 
+            仁さん&nbsp; 
+            3000さん&nbsp; 
+            みみさん&nbsp;
+            ちーすけさん&nbsp;
+            はまさん&nbsp; 
+            よぴぴ梅さん&nbsp; 
+            A.Kazu&Hiroさん&nbsp; 
+            マツケン&ensp; 
+            河合健太さん&nbsp; 
+            choko115さん&nbsp;
+            Fumika.Aさん&nbsp; 
+            みんなの居場所よってカフェさん&nbsp;
+            あさちゃんさん&nbsp; 
+            りおさん&nbsp; 
+            トゥイーティーさん&nbsp; 
+            たむそんさん&nbsp; 
+            kuniminaさん&nbsp; 
+            イジナシさん&nbsp; 
+            さよさん&nbsp; 
+            misohagiさん&nbsp; 
+            Tarteさん&nbsp; 
+            やま子さん&nbsp; 
+            kochan1220さん&nbsp; 
+            あゆみさん&nbsp; 
+            tomokaさん&nbsp; 
+            ふみさんさん&nbsp; 
+            れいさんさん&nbsp; 
+            Kさん&nbsp; 
+            さよさん&nbsp; 
+            マツオユカさん&nbsp; 
+            とりさん&nbsp; 
+            masaさん&nbsp; 
+            合同会社ebusinessさん&nbsp;
+            まさくんさん&nbsp; 
+            サチネ・ベルソニカ・チェンジザワールドさん&nbsp; 
+            感情の迷路に迷い込んだトラさん&nbsp; 
         </p>
       </div>
 
@@ -78,34 +93,46 @@
           hidden-sm-and-up 
           grey--text 
           text--darken-3
-          text-body-2"
+          text-caption"
           ><br>
-            Komushiさん &nbsp;
+            Komushiさん&nbsp;
             AkihiroNishimotoさん&nbsp; 
-            仁さん
-            <br>
-            3000さん &nbsp; 
-            みみさん &nbsp;
-            ちーすけさん &nbsp;
-            はまさん
-            <br>
-            よぴぴ梅さん &nbsp; 
-            A.Kazu&Hiroさん &nbsp; 
-            マツケン  &ensp; 
-            <br>
-            河合健太さん &nbsp; 
-            choko115さん &nbsp;
-            Fumika.Aさん 
-            <br>
-            みんなの居場所よってカフェさん &nbsp;
-            あさちゃんさん 
-            <br>
-            りおさん &nbsp; 
-            トゥイーティーさん &nbsp; 
-            たむそんさん  &nbsp; 
-            kuniminaさん  &nbsp; 
-            イジナシさん  &nbsp; 
-            さよさん  &nbsp; 
+            仁さん&nbsp; 
+            3000さん&nbsp; 
+            みみさん&nbsp;
+            ちーすけさん&nbsp;
+            はまさん&nbsp; 
+            よぴぴ梅さん&nbsp; 
+            A.Kazu&Hiroさん&nbsp; 
+            マツケン&ensp; 
+            河合健太さん&nbsp; 
+            choko115さん&nbsp;
+            Fumika.Aさん&nbsp; 
+            みんなの居場所よってカフェさん&nbsp;
+            あさちゃんさん&nbsp; 
+            りおさん&nbsp; 
+            トゥイーティーさん&nbsp; 
+            たむそんさん&nbsp; 
+            kuniminaさん&nbsp; 
+            イジナシさん&nbsp; 
+            さよさん&nbsp; 
+            misohagiさん&nbsp; 
+            Tarteさん&nbsp; 
+            やま子さん&nbsp; 
+            kochan1220さん&nbsp; 
+            あゆみさん&nbsp; 
+            tomokaさん&nbsp; 
+            ふみさんさん&nbsp; 
+            れいさんさん&nbsp; 
+            Kさん&nbsp; 
+            さよさん&nbsp; 
+            マツオユカさん&nbsp; 
+            とりさん&nbsp; 
+            masaさん&nbsp; 
+            合同会社ebusinessさん&nbsp;
+            まさくんさん&nbsp; 
+            サチネ・ベルソニカ・チェンジザワールドさん&nbsp; 
+            感情の迷路に迷い込んだトラさん&nbsp; 
         </p>
       </div>
   
