@@ -2,9 +2,7 @@
 <template>
   <v-container>
     <h1 class="head-border mt-0 mb-10">
-      <a id="index3">
         <strong>FINAL RESULTS</strong>
-      </a>
     </h1>
 
 <!-- 最終結果画像        --> 
